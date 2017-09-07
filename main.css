@@ -63,7 +63,7 @@ body {
 }
 
 .empty{
-  padding-bottom: 50%;
+  padding-bottom: 55%;
   width: 100vw;
 }
 
@@ -90,13 +90,12 @@ body {
   margin: auto;
   font-family: "Noto Sans", "Noto Sans CJK TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
   color: #000000;
-  margin-bottom: 50px;
 }
 
 .title{
   width: 50vh;
   padding: 5px;
-  margin: auto;
+  margin: 50px auto auto auto;
 }
 
 .title-h2{
