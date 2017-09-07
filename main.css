@@ -105,6 +105,39 @@ body {
   color: #000000;
 }
 
+.btitle{
+  color: #888888;
+}
+
+.stitle{
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  left: 0px;
+}
+
+.stitle:before{
+  width: 100px;
+  content: " ";
+  background-image: url("img/stitle.png");
+  position: absolute;
+  left: 90px;
+  top: -30px;
+  height:100px;
+  z-index: 0;
+  background-size: cover;
+}
+
+.tab{
+  padding-left: 5em;
+}
+
+.map{
+  border: 0;
+  width: 50vw;
+  height: 500px;
+}
+
 #sidebar .list-group-item {
     border-radius: 0;
     background-color: #333;
