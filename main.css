@@ -22,6 +22,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  font-family: "Noto Sans", "Noto Sans CJK TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 
 .bg{
@@ -59,8 +60,13 @@ body {
 }
 
 .content{
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(187,201,208,0.8);
   padding: 2em 2em 2em 2em;
+  width: 50vw;
+  margin: auto;
+  font-family: "Noto Sans", "Noto Sans CJK TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+  color: #000000;
+  margin-bottom: 50px;
 }
 
 .title{
@@ -71,7 +77,9 @@ body {
 
 .title-h2{
   padding: 5px;
-  background-color: rgba(170,170,170,0.7);
+  font-family: "Noto Sans", "Noto Sans CJK TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+  background-color: rgba(170,170,170,0.8);
+  color: #000000;
 }
 
 #sidebar .list-group-item {
