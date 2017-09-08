@@ -93,7 +93,7 @@ body {
 }
 
 .title{
-  width: 50vh;
+  width: 20vw;
   padding: 5px;
   margin: 50px auto auto auto;
 }
@@ -237,6 +237,9 @@ body {
 }
 
 @media (max-width: 70em) {
+  .title{
+  	width: 80vw;
+  }
   .content{
     width: 100%;
   }
