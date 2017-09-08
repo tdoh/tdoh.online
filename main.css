@@ -121,7 +121,7 @@ body {
   content: " ";
   background-image: url("img/stitle.png");
   position: absolute;
-  left: 90px;
+  left: 5.5vw;
   top: -30px;
   height:100px;
   z-index: 0;
