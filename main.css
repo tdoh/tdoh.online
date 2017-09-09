@@ -241,7 +241,7 @@ body {
 
 @media (max-width: 70em) {
   .title{
-  	width: 80vw;
+  	width: 80%;
   }
   .content{
     width: 100%;
