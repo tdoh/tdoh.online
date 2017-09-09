@@ -213,3 +213,9 @@ body {
     right: 0;
   }
 }
+
+@media (max-width: 710px){
+  body{
+    background-position-y: 8vw;
+  }
+}
