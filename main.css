@@ -84,11 +84,14 @@ body {
 }
 
 .content{
-  background-color: rgba(187,201,208,0.8);
   padding: 2em 2em 2em 2em;
   width: 50vw;
   margin: auto;
   font-family: "Noto Sans", "Noto Sans CJK TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+  color: #FFFFFF;
+}
+.content-bg{
+  background-color: rgba(187,201,208,0.8);
   color: #000000;
 }
 
