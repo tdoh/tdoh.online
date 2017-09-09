@@ -6,7 +6,7 @@ $.get('js/team.json', function(res){
 		output += '<div class="row">';
 		for (var person in res[group]) {
 			output += '<div class="avator">';
-			output += '<img src="' + res[group][person].P + '">';
+			output += '<img src="' + (res[group][person].P || "img/avatar/image0.png") + '">';
 			output += '<p class="name hm">' + res[group][person].N + '</p>';
 			output += '</div>';
 	    }
