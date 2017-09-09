@@ -23,7 +23,11 @@ body {
   overflow-x: hidden;
 }
 
-.navbar-brand{
+.navbar-brand-text{
+  padding-left: 95px;
+}
+
+.navbar-brand-bg{
   content: url("img/logo.png");
   height: 80px;
   position: absolute;
@@ -209,8 +213,11 @@ body {
 }
 
 @media (max-width: 768px){
-  .navbar-brand{
+  .navbar-brand-bg{
     right: 0;
+  }
+  .navbar-brand-text{
+    display: none;
   }
 }
 
