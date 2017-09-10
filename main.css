@@ -175,8 +175,12 @@ body {
 }
 .staff .content .avator .name {
     width: 100%;
+    font-size: 0.5vw;
     position: absolute;
-    top: 105px;
+    top: 110px;
+    width: 120%;
+    left: -10%;
+
 }
 .staff .content .spacing {
     margin-bottom: 15px;
@@ -192,9 +196,10 @@ body {
     margin-bottom: 35px;
   }
   .staff .content .avator .name {
-    width: 100%;
+    width: 120%;
+    font-size: 0.5vw;
     position: absolute;
-    top: 80px;
+    top: 84px;
   }
   .staff .content .avator p {
     size: 3em;
