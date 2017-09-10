@@ -1,1 +1,242 @@
-{"總召組":[{"N":"HrJ","P":"img/avatar/image29.jpg"},{"N":"Syu","P":"img/avatar/image40.jpg"},{"N":"蟲蟲","P":"img/avatar/image48.jpg"},{"N":"嘖嘖","P":"img/avatar/image1.png"}],"行政組":[{"N":"JK","P":""},{"N":"葉子","P":"img/avatar/image49.jpg"},{"N":"球魚","P":"img/avatar/image6.png"}],"場務組":[{"N":"阿貓","P":"img/avatar/image16.jpg"},{"N":"Rex","P":"img/avatar/image46.jpg"},{"N":"Gent","P":"img/avatar/image51.jpg"},{"N":"Jeremy","P":"img/avatar/image12.png"},{"N":"阿星","P":"img/avatar/image36.jpg"},{"N":"海豹","P":"img/avatar/image39.jpg"},{"N":"小知","P":"img/avatar/image11.png"},{"N":"龍貓","P":"img/avatar/image31.png"},{"N":"千元","P":"img/avatar/image28.jpg"},{"N":" Sol","P":"img/avatar/image7.png"},{"N":"小曹","P":"img/avatar/image2.png"},{"N":"Molly","P":"img/avatar/image26.jpg"},{"N":"少左","P":"img/avatar/image18.jpg"},{"N":"短短","P":"img/avatar/image37.jpg"},{"N":"lemotw","P":"img/avatar/image23.jpg"},{"N":"布魯斯","P":"img/avatar/image53.png"},{"N":"全全","P":"img/avatar/image13.jpg"}],"議程組":[{"N":"蔥蔥","P":"img/avatar/image20.png"},{"N":"土撥鼠","P":"img/avatar/image44.jpg"},{"N":"Christopher","P":"img/avatar/image52.jpg"},{"N":"GrayOD","P":"img/avatar/image4.png"},{"N":"大胖（Yan Jun）","P":"img/avatar/image9.jpg"},{"N":"阿咪","P":""},{"N":"金魚","P":"img/avatar/image35.jpg"}],"餐飲組":[{"N":"PN Wu (小平)","P":"img/avatar/image41.png"},{"N":"Snake","P":"img/avatar/image19.jpg"},{"N":"Emma","P":"img/avatar/image8.jpg"},{"N":"小明","P":"img/avatar/image45.jpg"},{"N":"遇雨","P":"img/avatar/image5.png"}],"財務組":[{"N":"腦腦","P":"img/avatar/image14.jpg"},{"N":"鈞鈞","P":"img/avatar/image47.jpg"},{"N":"彤彤","P":"img/avatar/image17.jpg"},{"N":"刃刃","P":"img/avatar/image33.jpg"}],"攝影組":[{"N":"Deimos","P":"img/avatar/image32.jpg"},{"N":"大助","P":"img/avatar/image24.jpg"},{"N":"Vagabond","P":"img/avatar/image15.jpg"},{"N":"百香","P":"img/avatar/image22.jpg"},{"N":"Roger Huang","P":"img/avatar/image43.jpg"},{"N":"PCC","P":"img/avatar/image10.jpg"}],"公關組":[{"N":"大順","P":"img/avatar/image34.jpg"},{"N":"ws育慈","P":"img/avatar/image42.jpg"},{"N":"刺蝟","P":"img/avatar/image30.jpg"}],"形象組":[{"N":"湯湯","P":"img/avatar/image50.jpg"},{"N":"miti","P":"img/avatar/image21.jpg"},{"N":"小t","P":"img/avatar/image27.png"}],"活動組":[{"N":"adr","P":"img/avatar/image38.png"},{"N":"蛋糕","P":"img/avatar/image25.jpg"},{"N":"Andyyy","P":"img/avatar/image3.png"}]}
+{
+  "總召組": [
+    {
+      "N": "HrJ",
+      "P": "img/avatar/image29.jpg"
+    },
+    {
+      "N": "Syu",
+      "P": "img/avatar/image40.jpg"
+    },
+    {
+      "N": "蟲蟲",
+      "P": "img/avatar/image48.jpg"
+    },
+    {
+      "N": "嘖嘖",
+      "P": "img/avatar/image1.png"
+    }
+  ],
+  "行政組": [
+    {
+      "N": "JK",
+      "P": ""
+    },
+    {
+      "N": "葉子",
+      "P": "img/avatar/image49.jpg"
+    },
+    {
+      "N": "球魚",
+      "P": "img/avatar/image6.png"
+    }
+  ],
+  "場務組": [
+    {
+      "N": "阿貓",
+      "P": "img/avatar/image16.jpg"
+    },
+    {
+      "N": "Rex",
+      "P": "img/avatar/image46.jpg"
+    },
+    {
+      "N": "Gent",
+      "P": "img/avatar/image51.jpg"
+    },
+    {
+      "N": "Jeremy",
+      "P": "img/avatar/image12.png"
+    },
+    {
+      "N": "阿星",
+      "P": "img/avatar/image36.jpg"
+    },
+    {
+      "N": "海豹",
+      "P": "img/avatar/image39.jpg"
+    },
+    {
+      "N": "小知",
+      "P": "img/avatar/image11.png"
+    },
+    {
+      "N": "龍貓",
+      "P": "img/avatar/image31.png"
+    },
+    {
+      "N": "千元",
+      "P": "img/avatar/image28.jpg"
+    },
+    {
+      "N": " Sol",
+      "P": "img/avatar/image7.png"
+    },
+    {
+      "N": "小曹",
+      "P": "img/avatar/image2.png"
+    },
+    {
+      "N": "Molly",
+      "P": "img/avatar/image26.jpg"
+    },
+    {
+      "N": "少左",
+      "P": "img/avatar/image18.jpg"
+    },
+    {
+      "N": "短短",
+      "P": "img/avatar/image37.jpg"
+    },
+    {
+      "N": "lemotw",
+      "P": "img/avatar/image23.jpg"
+    },
+    {
+      "N": "布魯斯",
+      "P": "img/avatar/image53.png"
+    },
+    {
+      "N": "全全",
+      "P": "img/avatar/image13.jpg"
+    }
+  ],
+  "議程組": [
+    {
+      "N": "蔥蔥",
+      "P": "img/avatar/image20.png"
+    },
+    {
+      "N": "土撥鼠",
+      "P": "img/avatar/image44.jpg"
+    },
+    {
+      "N": "Christopher",
+      "P": "img/avatar/image52.jpg"
+    },
+    {
+      "N": "GrayOD",
+      "P": "img/avatar/image4.png"
+    },
+    {
+      "N": "大胖 (Yan Jun)",
+      "P": "img/avatar/image9.jpg"
+    },
+    {
+      "N": "阿咪",
+      "P": ""
+    },
+    {
+      "N": "金魚",
+      "P": "img/avatar/image35.jpg"
+    }
+  ],
+  "餐飲組": [
+    {
+      "N": "PN Wu (小平)",
+      "P": "img/avatar/image41.png"
+    },
+    {
+      "N": "Snake",
+      "P": "img/avatar/image19.jpg"
+    },
+    {
+      "N": "Emma",
+      "P": "img/avatar/image8.jpg"
+    },
+    {
+      "N": "小明",
+      "P": "img/avatar/image45.jpg"
+    },
+    {
+      "N": "遇雨",
+      "P": "img/avatar/image5.png"
+    }
+  ],
+  "財務組": [
+    {
+      "N": "腦腦",
+      "P": "img/avatar/image14.jpg"
+    },
+    {
+      "N": "鈞鈞",
+      "P": "img/avatar/image47.jpg"
+    },
+    {
+      "N": "彤彤",
+      "P": "img/avatar/image17.jpg"
+    },
+    {
+      "N": "刃刃",
+      "P": "img/avatar/image33.jpg"
+    }
+  ],
+  "攝影組": [
+    {
+      "N": "Deimos",
+      "P": "img/avatar/image32.jpg"
+    },
+    {
+      "N": "大助",
+      "P": "img/avatar/image24.jpg"
+    },
+    {
+      "N": "Vagabond",
+      "P": "img/avatar/image15.jpg"
+    },
+    {
+      "N": "百香",
+      "P": "img/avatar/image22.jpg"
+    },
+    {
+      "N": "Roger Huang",
+      "P": "img/avatar/image43.jpg"
+    },
+    {
+      "N": "PCC",
+      "P": "img/avatar/image10.jpg"
+    }
+  ],
+  "公關組": [
+    {
+      "N": "大順",
+      "P": "img/avatar/image34.jpg"
+    },
+    {
+      "N": "ws育慈",
+      "P": "img/avatar/image42.jpg"
+    },
+    {
+      "N": "刺蝟",
+      "P": "img/avatar/image30.jpg"
+    }
+  ],
+  "形象組": [
+    {
+      "N": "湯湯",
+      "P": "img/avatar/image50.jpg"
+    },
+    {
+      "N": "miti",
+      "P": "img/avatar/image21.jpg"
+    },
+    {
+      "N": "小t",
+      "P": "img/avatar/image27.png"
+    }
+  ],
+  "活動組": [
+    {
+      "N": "adr",
+      "P": "img/avatar/image38.png"
+    },
+    {
+      "N": "蛋糕",
+      "P": "img/avatar/image25.jpg"
+    },
+    {
+      "N": "Andyyy",
+      "P": "img/avatar/image3.png"
+    }
+  ]
+}
