@@ -29,7 +29,6 @@ body {
 }
 
 .navbar-brand-bg{
-  content: url("img/logo.png");
   height: 80px;
   position: absolute;
   top: 0px;
