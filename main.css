@@ -171,6 +171,21 @@ body {
 .staff .content .row {
     margin-left: 65px;
 }
+
+#teams > .team-row > * {
+  display: inline-flex;
+  vertical-align: top;
+}
+
+#teams > .team-row > h3 {
+  justify-content:center;
+}
+
+#teams > .team-row > .row {
+  margin-left: 15px;
+  width: calc(100% - 60px);
+}
+
 .staff .content .avator {
     margin: 5px;
     margin-bottom: 35px;
@@ -189,7 +204,7 @@ body {
 }
 .staff .content .avator .name {
     width: 100%;
-    font-size: 0.5vw;
+    font-size: 0.8vw;
     position: absolute;
     top: 110px;
     width: 120%;
