@@ -29,10 +29,23 @@ body {
 }
 
 .navbar-brand-bg{
-  content: url("img/logo.png");
   height: 80px;
   position: absolute;
   top: 0px;
+}
+
+#logo {
+  position: absolute;
+  top: 55%;
+  width: 25%;
+  left: calc(50% - 25% / 2);
+}
+
+.seeThru-display {
+  position: absolute;
+  top: 55%;
+  width: 25%;
+  left: calc(50% - 25% / 2);
 }
 
 .bg1{
@@ -64,6 +77,7 @@ body {
 .empty{
   padding-bottom: 55%;
   width: 100vw;
+  position: relative
 }
 
 .footer {

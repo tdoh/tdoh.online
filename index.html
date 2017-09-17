@@ -16,6 +16,7 @@
     <link href="main.css" rel="stylesheet">
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106534345-1"></script>
+    <script src="https://unpkg.com/seethru@3/dist/seeThru.min.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments)};
@@ -31,7 +32,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <a class="navbar-brand navbar-brand-bg" href="index.html">TDOHacker</a>
+      <img class="navbar-brand navbar-brand-bg" src="img/logo.png" />
       <a class="navbar-brand navbar-brand-text" href="index.html">TDOHacker</a>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -55,7 +56,17 @@
       </div>
     </nav>
 
-    <div class="empty"></div>
+    <div class="empty">
+      <video autoplay="autoplay" id="logo" loop>
+        <source src="video/logo.mp4" type="video/mp4" />
+      </video>
+      <script>
+        seeThru.create('#logo', {
+          width: 500,
+          height: 500
+        });
+      </script>
+    </div>
 
     <div class="container">
       <div class="hm title align-middle">
