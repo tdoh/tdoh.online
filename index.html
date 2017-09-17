@@ -26,36 +26,6 @@
     </script>
   </head>
   <body class="bg1">
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top ud-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <img class="navbar-brand navbar-brand-bg" src="img/logo.png" />
-      <a class="navbar-brand navbar-brand-text" href="index.html">TDOHacker</a>
-
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="temp.html">議程資訊</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="transport.html">交通資訊</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="temp.html">贊助廠商</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="team.html">工作團隊</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://tdohackerparty.kktix.cc/events/tdoh-conf-2017">報名</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
     <div class="empty">
       <video autoplay="autoplay" id="logo" loop>
         <source src="video/logo.mp4" type="video/mp4" />
@@ -103,13 +73,11 @@
       <hr class="featurette-divider">
     </div>
 
-    <footer class="footer ud-dark">
-      <div class="container align-middle hm">
-        <span class="">Copyright © TDOHACKER</span>
-      </div>
-    </footer>
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $.get('navbar.html',function(data){$('body').prepend(data)});
+      $.get('footer.html',function(data){$('body').append(data)});
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
