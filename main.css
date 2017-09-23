@@ -161,6 +161,8 @@ td {
   height: 50px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+  text-align: center;
+  vertical-align: middle;
 }
 
 tbody > tr > td:nth-child(1):not(.content-bg){
@@ -257,6 +259,12 @@ tbody > tr > td:nth-child(1):not(.content-bg){
   }
   .map{
     width: 100%;
+  }
+}
+
+@media (max-width: 30em) {
+  td{
+    font-size: 0.8em;
   }
 }
 
