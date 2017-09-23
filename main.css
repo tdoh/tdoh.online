@@ -219,7 +219,7 @@ tbody > tr > td:nth-child(1):not(.content-bg){
 }
 .staff .content .avator .name {
     width: 100%;
-    font-size: 0.8vw;
+    font-size: 1em;
     position: absolute;
     top: 110px;
     width: 120%;
@@ -241,7 +241,7 @@ tbody > tr > td:nth-child(1):not(.content-bg){
   }
   .staff .content .avator .name {
     width: 120%;
-    font-size: 0.5vw;
+    font-size: 0.9em;
     position: absolute;
     top: 84px;
   }
