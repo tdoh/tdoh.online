@@ -11,6 +11,9 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <!-- Magnific-Popup CSS -->
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
 
     <!-- Custom styles for this template -->
     <link href="main.css" rel="stylesheet">
@@ -32,6 +35,19 @@
       </div>
 
       <!--<div class="content content-bg">-->
+		    <div id="mfp-popup-program" class="white-popup mfp-with-anim mfp-hide">
+		    	<div class="avator"></div>
+		    	<div class="data">
+		    		<div class="title">主題</div>
+		    		<div class="data-title"></div>
+		    		<div class="title">內容大綱</div>
+		    		<div class="data-description"></div>
+		    		<div class="title">簡報</div>
+		    		<div class="data-briefing"><a href="javascript:void(0)">檢視</a></div>
+		    		<div class="title">講者介紹</div>
+		    		<div class="data-speaker"></div>
+		    	</div>
+		    </div>
         <table class="content">
           <thead>
             <tr>
@@ -56,10 +72,15 @@
             </tr>
 
             <tr>
-              <td  width="10%">11:30~12:20</td>
-              <td class="content-bg">簡介 CVE-2017-9993 與 BambooFox 讀書會</td>
-              <td class="content-bg">第一次吃洋蔥就上手</td>
-              <td class="content-bg">神秘議程</td>
+              <td  width="10%" rowspan="2">11:30~12:20</td>
+              <td class="content-bg" rowspan="2" href="#mfp-popup-program">
+              	<p>簡介 CVE-2017-9993 與 BambooFox 讀書會</p>CALee
+              </td>
+              <td class="content-bg" rowspan="2"><p>第一次吃洋蔥就上手</p>Jie</td>
+              <td class="content-bg"><p>Stack Buffer Overflow 的保護與繞過</p>UCCU</td>
+            </tr>
+            <tr>
+            	<td class="content-bg"><p>What’s the shellcode and how to design</p>資策會</td>
             </tr>
 
             <tr>
@@ -69,12 +90,12 @@
 
             <tr>
               <td  width="10%" rowspan="2">12:35~13:25</td>
-              <td class="content-bg" rowspan="2">那些年我們遇過的資安事件-淺談網路安全情資共享機制及實作</td>
-              <td class="content-bg" rowspan="2">Build a great wall : Anti Recon</td>
-              <td class="content-bg">Python security from top to bottom</td>
+              <td class="content-bg" rowspan="2"><p>那些年我們遇過的資安事件-淺談網路安全情資共享機制及實作</p>HTz</td>
+              <td class="content-bg" rowspan="2"><p>Build a great wall : Anti Recon</p>JohnThunder</td>
+              <td class="content-bg"><p>Python security from top to bottom</p>Jhe</td>
             </tr>
             <tr>
-              <td class="content-bg">神秘議程</td>
+              <td class="content-bg"><p>讓危機變轉機-人人都是漏洞救星</p>TWCERT</td>
             </tr>
 
             <tr>
@@ -84,12 +105,12 @@
 
             <tr>
               <td  width="10%" rowspan="2">13:40~14:30</td>
-              <td class="content-bg" rowspan="2">那些年失守的類比家園-事件調查及資安防護的經驗分享</td>
-              <td class="content-bg" rowspan="2">Securing Data Plane in SDN</td>
-              <td class="content-bg">Wi-Fi詐欺術</td>
+              <td class="content-bg" rowspan="2"><p>那些年失守的類比家園-事件調查及資安防護的經驗分享</p>Keyboard007</td>
+              <td class="content-bg" rowspan="2"><p>Securing Data Plane in SDN</p>Nicky</td>
+              <td class="content-bg"><p>Wi-Fi詐欺術</p>DuckLL</td>
             </tr>
             <tr>
-              <td class="content-bg">神秘議程</td>
+              <td class="content-bg"><p>堅持在濁水以南的力量</p>MOPCON</td>
             </tr>
 
             <tr>
@@ -99,11 +120,13 @@
 
             <tr>
               <td  width="10%" rowspan="2">14:45~15:35</td>
-              <td class="content-bg" rowspan="2">密碼學漏洞與他們的產地</td>
-              <td class="content-bg" rowspan="2">大會活動：Call for idea!</td>
-              <td class="content-bg" rowspan="2">神秘議程</td>
+              <td class="content-bg" rowspan="2"><p>密碼學漏洞與他們的產地</p>Zuan</td>
+              <td class="content-bg"><p>行動偽基站的安全疑慮與演示</p>TTC</td>
+              <td class="content-bg"><p>從0開始做Android惡意程式分析</p>UCCU</td>
             </tr>
             <tr>
+              <td class="content-bg">大會活動：Call for idea!</td>
+              <td class="content-bg"><p>Intern up : practising the work skill of cyber security</p>資策會</td>
             </tr>
 
             <tr>
@@ -113,12 +136,12 @@
 
             <tr>
               <td  width="10%" rowspan="2">15:50~16:40</td>
-              <td class="content-bg" rowspan="2">不要騙我了！對抗釣魚網站的經驗談</td>
-              <td class="content-bg" rowspan="2">逆向工程：從入門到放棄</td>
-              <td class="content-bg">校園物聯網滲透</td>
+              <td class="content-bg" rowspan="2"><p>不要騙我了！對抗釣魚網站的經驗談</p>Jerry</td>
+              <td class="content-bg" rowspan="2"><p>逆向工程：從入門到放棄</p>Inndy</td>
+              <td class="content-bg"><p>校園物聯網滲透</p>Gent</td>
             </tr>
             <tr>
-              <td class="content-bg">神秘議程</td>
+              <td class="content-bg"><p>反抗無用，接受進步</p>博格資安企業讀書會</td>
             </tr>
 
             <tr>
@@ -128,12 +151,12 @@
 
             <tr>
               <td  width="10%" rowspan="2">16:55~17:45</td>
-              <td class="content-bg" rowspan="2">他山之石:從中共戰略支援部隊看我國資電軍未來發展</td>
-              <td class="content-bg">APP檢測之經驗分享</td>
+              <td class="content-bg" rowspan="2"><p>他山之石:從中共戰略支援部隊看我國資電軍未來發展</p>林穎佑</td>
+              <td class="content-bg"><p>APP檢測之經驗分享</p>飛飛</td>
               <td class="content-bg" rowspan="2">N/A</td>
             </tr>
             <tr>
-              <td class="content-bg">從打Bug bounty到VIP會員</td>
+              <td class="content-bg"><p>從打Bug bounty到VIP會員</p>郭璟塘</td>
             </tr>
 
             <tr>
@@ -160,6 +183,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Magnific Popup core JS file -->
+		<script src="magnific-popup/jquery.magnific-popup.js"></script>
     <script>
       $.get('navbar.html',function(data){
         $('body').prepend(data);

@@ -24,6 +24,26 @@ body {
   overflow-x: hidden;
 }
 
+.hide { display: none; }
+
+.white-popup {
+	font-family: "Noto Sans", "Noto Sans CJK TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+	position: relative;
+	background: #AAA;
+	padding: 25pt;
+	width: 60%;
+	margin: 0 auto;
+	border: 4px solid #808080;
+}
+.white-popup .avator { float: initial; margin-left: auto; margin-right: auto; }
+.white-popup .data { margin-left: 200px; }
+.white-popup .data .title { font-size: 24px; text-align:center;}
+.white-popup .data [class^=data-] { font-size: 16px; text-align:center;}
+.white-popup .data .data-description { min-height: 60px; max-height: 400px; text-align:center; }
+
+.avatar { width: 100px; height: 100px; display: block; margin-left: auto; margin-right: auto; border-radius: 50%; vertical-align: middle; overflow: hidden; }
+.avatar img { width: 100%; height: 100%; }
+
 .navbar-brand-text{
   padding-left: 95px;
 }
