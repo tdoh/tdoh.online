@@ -6,7 +6,7 @@ jQuery(document).ready(function(){
 		    beforeOpen: function() {
 		    	briefing = jQuery(this.st.el).find('.data').data('briefing');
 
-		    	jQuery('#mfp-popup-program .avator').html( jQuery(this.st.el).find('.avatar').html() );
+		    	/*jQuery('#mfp-popup-program .avator').html( jQuery(this.st.el).find('.avatar').html() );*/
 		    	jQuery('#mfp-popup-program .data-title').html( jQuery(this.st.el).find('.data-title').html() );
 		    	jQuery('#mfp-popup-program .data-description').html( jQuery(this.st.el).find('.description').html() );
 		    	if( briefing != undefined && briefing != '' ){
