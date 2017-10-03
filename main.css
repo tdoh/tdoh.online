@@ -24,6 +24,22 @@ body {
   overflow-x: hidden;
 }
 
+.hide { display: none; }
+
+.white-popup {
+	font-family: "Noto Sans", "Noto Sans CJK TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+	position: relative;
+	background: #AAA;
+}
+.white-popup .avator { width: 100px; vertical-align: top; float: left; }
+.white-popup .avator img { width: 100%; border-radius: 50%; }
+.white-popup .data { margin-left: 31%; margin-right: 30%; padding-bottom: 10px }
+.white-popup .data [class^=data-] { font-size: 16px; }
+
+.DDtitle { font-size: 24px; font-weight: bold; padding-top: 10px; }
+.avatar { width: 100px; height: 100px; display: block; margin-left: auto; margin-right: auto; border-radius: 50%; vertical-align: middle; overflow: hidden; }
+.avatar img { width: 100%; height: 100%; }
+
 .navbar-brand-text{
   padding-left: 95px;
 }
@@ -230,6 +246,10 @@ tbody > tr > td:nth-child(1):not(.content-bg){
     margin-bottom: 15px;
 }
 
+.link {
+  cursor: pointer;
+}
+
 @media (max-width: 50em) {
   .staff .content h3 {
     height: 75px;
@@ -274,5 +294,9 @@ tbody > tr > td:nth-child(1):not(.content-bg){
   }
   .navbar-brand-text{
     display: none;
+  }
+  .white-popup .data {
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }

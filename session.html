@@ -11,6 +11,9 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <!-- Magnific-Popup CSS -->
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
 
     <!-- Custom styles for this template -->
     <link href="main.css" rel="stylesheet">
@@ -32,6 +35,19 @@
       </div>
 
       <!--<div class="content content-bg">-->
+		    <div id="mfp-popup-program" class="white-popup mfp-hide">
+		    	<div class="avator"></div>
+		    	<div class="data">
+		    		<div class="DDtitle">主題</div>
+		    		<div class="data-title"></div>
+		    		<div class="DDtitle">內容大綱</div>
+		    		<div class="data-description"></div>
+		    		<div class="DDtitle">簡報</div>
+		    		<div class="data-briefing"><a href="javascript:void(0)">檢視</a></div>
+		    		<div class="DDtitle">講者</div>
+		    		<div class="data-speaker"></div>
+		    	</div>
+		    </div>
         <table class="content">
           <thead>
             <tr>
@@ -56,10 +72,50 @@
             </tr>
 
             <tr>
-              <td  width="10%">11:30~12:20</td>
-              <td class="content-bg">簡介 CVE-2017-9993 與 BambooFox 讀書會</td>
-              <td class="content-bg">第一次吃洋蔥就上手</td>
-              <td class="content-bg">神秘議程</td>
+              <td  width="10%" rowspan="2">11:30~12:20</td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/CALee.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">簡介 CVE-2017-9993 與 BambooFox 讀書會</div>
+              		<div class="description hide">簡介 CVE-2017-9993 如何繞過防禦，利用 ssrf 造成任意讀取的資安漏洞</div>
+              		<br>
+              		<div class="speaker">CALee</div>
+              	</div>
+              </td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Jie.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">第一次吃洋蔥就上手</div>
+              		<div class="description hide">這個世界上, 有陽光的地方就會有陰暗處, 白天的結束就代表著夜晚的到來, 網際網路也是一樣. 據不具名機構調查, 世界上大約有30%的網站可以從Google查詢的到, 剩下的70%則隱身於陰暗處, 許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著. 希望藉由這session帶領大家一窺暗網的面貌, 也討論其背後相關技術</div>
+              		<br>
+              		<div class="speaker">Jie</div>
+              	</div>
+              </td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/UCCU.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">Stack Buffer Overflow 的保護與繞過</div>
+              		<div class="description hide">Buffer Overflow 是好幾十年來一直存在的問題，工程師們想出了多種方法去防禦，但這真的能完全抵擋住駭客的攻擊嗎？以 CTF 題目為例，介紹 BOF 所使用的保護與該怎麼利用程式設計師未注意到的錯誤來繞過保護。</div>
+              		<br>
+              		<div class="speaker">UCCU</div>
+              	</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/III.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">What’s the shellcode and how to design</div>
+              		<div class="description hide">尚未提供</div>
+              		<br>
+              		資策會
+              		<div class="speaker hide">財團法人資訊工業策進會</div>
+              	</div>
+              </td>
             </tr>
 
             <tr>
@@ -69,12 +125,49 @@
 
             <tr>
               <td  width="10%" rowspan="2">12:35~13:25</td>
-              <td class="content-bg" rowspan="2">那些年我們遇過的資安事件-淺談網路安全情資共享機制及實作</td>
-              <td class="content-bg" rowspan="2">Build a great wall : Anti Recon</td>
-              <td class="content-bg">Python security from top to bottom</td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/HTz.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">那些年我們遇過的資安事件-淺談網路安全情資共享機制及實作</div>
+              		<div class="description hide">淺談網路安全情資共享機制及實作</div>
+              		<br>
+              		<div class="speaker">HTz</div>
+              	</div>
+              </td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/JohnThunder.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">Build a great wall : Anti Recon</div>
+              		<div class="description hide">駭客進行攻擊前，都會進行偵察收集足夠的資訊<br>此 Talk 會簡單解析常見偵查工具<br>並介紹如何做基本的 Anti Reconnaissance<br>由此增加攻擊者的攻擊成本</div>
+              		<br>
+              		<div class="speaker">JohnThunder</div>
+              	</div>
+              </td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/UCCU.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">Python security from top to bottom</div>
+              		<div class="description hide">軟體安全一直是安全領域中不可忽視的重點，常常因為開發者的不全然理解，而衍生許多安全問題，本議題將以 Python 為中心介探討各種與 之相關的安全問題。</div>
+              		<br>
+              		<div class="speaker">Jhe</div>
+              	</div>
+              </td>
             </tr>
             <tr>
-              <td class="content-bg">神秘議程</td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/TWCERT.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">讓危機變轉機-人人都是漏洞救星</div>
+              		<div class="description hide">台灣民眾資安意識普遍不足，為提升台灣民間網路安全環境，增進企業資安聯防效益，TWCERT/CC針對民間資安通報做法及多元通報管道進行宣導，並分享民間通報之處置案例，您將於會議中得知如何透過民間資安通報達到情資整合及聯防目的。<br><br>漏洞通報不再是資安專家的權力，每個人都可以主動進行漏洞通報作業，TWCERT/CC期望未來能持續提升民間資安事件通報率，並建立情資分享管道，早期預警網路威脅態勢，縮短資安事件處理時間，維護台灣網路安全環境。</div>
+              		<br>
+              		TWCERT
+              		<div class="speaker hide">台灣電腦網路危機處理暨協調中心</div>
+              	</div>
+              </td>
             </tr>
 
             <tr>
@@ -84,12 +177,48 @@
 
             <tr>
               <td  width="10%" rowspan="2">13:40~14:30</td>
-              <td class="content-bg" rowspan="2">那些年失守的類比家園-事件調查及資安防護的經驗分享</td>
-              <td class="content-bg" rowspan="2">Securing Data Plane in SDN</td>
-              <td class="content-bg">Wi-Fi詐欺術</td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Keyboard007.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">那些年失守的類比家園-事件調查及資安防護的經驗分享</div>
+              		<div class="description hide">藉由自身資安事件調查的經驗分享，並搭配自行整理的各種攻擊手法，整理並分享發生資安事件的時候所需要思維</div>
+              		<br>
+              		<div class="speaker">Keyboard007</div>
+              	</div>
+              </td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Nicky.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">Securing Data Plane in SDN</div>
+              		<div class="description hide">For this short talk, I would like to share my research on how to secure SDN on data plane. SDN is a new network structure that has a lot of advantages. But with new technology comes new threat. There are many security issues in SDN structure. In this talk, I'll first introduce SDN, including its advantages and disadvantages. Then, I'll explain why it can deal with some problems that tradition network can't handle, i.e. detecting a compromised switch automatically. Finally, I'll explain our solution and show some preliminary results of our experiment.</div>
+              		<br>
+              		<div class="speaker">Nicky</div>
+              	</div>
+              </td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/DuckLL.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">Wi-Fi詐欺術</div>
+              		<div class="description hide">網路是這個時代的必備品，身為學生沒有4G吃到飽，又想看一堆的影片，連上公共免費wifi是大家第一個反應，雖然知道有風險，但為了網路還是默默連上，掛上VPN就能安全許多？<br><br>這一場議程會帶給大家一個新的wifi釣魚技術，並講解如何用Raspberry Pi來實做這樣的攻擊。或許，你不會上鉤，但你的裝置會。</div>
+              		<br>
+              		<div class="speaker">DuckLL</div>
+              	</div>
+              </td>
             </tr>
             <tr>
-              <td class="content-bg">神秘議程</td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/MOPCON.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">堅持在濁水以南的力量</div>
+              		<div class="description hide">面對重北輕南的台灣現況，現今無論是北/南部社群，大多將研討會聚集在台北舉行，但是「為什麼南部就沒有自己的科技研討會呢？」一句看似無心的玩笑話促使 MOPCON 堅持在濁水溪以南舉辦，如今邁向第六年了！人數從 160人狂飆至現今的 1200 人，這樣的數字說明南部也是有辦法舉辦大型科技研討會的！我們將從介紹 MOPCON 起源、 成長歷程、合作夥伴、以及未來這股南部力量如何繼續發酵！</div>
+              		<br>
+              		<div class="speaker">MOPCON</div>
+              	</div>
+              </td>
             </tr>
 
             <tr>
@@ -99,11 +228,51 @@
 
             <tr>
               <td  width="10%" rowspan="2">14:45~15:35</td>
-              <td class="content-bg" rowspan="2">密碼學漏洞與他們的產地</td>
-              <td class="content-bg" rowspan="2">大會活動：Call for idea!</td>
-              <td class="content-bg" rowspan="2">神秘議程</td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Zuan.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">密碼學漏洞與他們的產地</div>
+              		<div class="description hide">本投稿整理常見的密碼學漏洞與問題以及一些使用密碼學時的建議。主要內容分成非對稱式加密，對稱式加密，Hash以及其他雜項，個別討論這些問題怎麼樣會出現，以及怎麼樣解決。</div>
+              		<br>
+              		<div class="speaker">Zuan</div>
+              	</div>
+              </td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/TTC.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">行動偽基站的安全疑慮與演示</div>
+              		<div class="description hide">偽基站是LTE常被討論的資安議題，利用偽基站發送LTE訊號，藉以欺騙手機，妨礙連接到真的站台。一種簡易實現的假基地台，發送LTE控制訊號，欺騙的目地除了造成阻斷服務，更有機會取得其信任作為下一階段的攻擊準備。</div>
+              		<br>
+              		TTC
+              		<div class="speaker hide">財團法人電信技術中心</div>
+              	</div>
+              </td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/UCCU.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">從0開始做Android惡意程式分析</div>
+              		<div class="description hide">偽基站是LTE常被討論的資安議題，利用偽基站發送LTE訊號，藉以欺騙手機，妨礙連接到真的站台。一種簡易實現的假基地台，發送LTE控制訊號，欺騙的目地除了造成阻斷服務，更有機會取得其信任作為下一階段的攻擊準備。</div>
+              		<br>
+              		<div class="speaker">UCCU</div>
+              	</div>
+              </td>
             </tr>
             <tr>
+              <td class="content-bg">大會活動：Call for idea!</td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/III.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">Intern up : practising the work skill of cyber security</div>
+              		<div class="description hide">尚未提供</div>
+              		<br>
+              		資策會
+              		<div class="speaker hide">財團法人資訊工業策進會</div>
+              	</div>
+              </td>
             </tr>
 
             <tr>
@@ -113,12 +282,48 @@
 
             <tr>
               <td  width="10%" rowspan="2">15:50~16:40</td>
-              <td class="content-bg" rowspan="2">不要騙我了！對抗釣魚網站的經驗談</td>
-              <td class="content-bg" rowspan="2">逆向工程：從入門到放棄</td>
-              <td class="content-bg">校園物聯網滲透</td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Jerry.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">不要騙我了！對抗釣魚網站的經驗談</div>
+              		<div class="description hide">你曾落入網路釣魚的陷阱嗎？<br>網址看起來正常、網頁看起來很像，但只要稍微眼花，個人資料就已經被偷走拉！<br><br>這場演講將介紹網路釣魚的近況、現有技術，分享對抗釣魚的實作經驗。會從架構設計出發，說明如何撰寫網頁爬蟲，抽取並選擇所需之特徵，使用機器學習套件建立模型利用主動學習的方式降低人工標籤成本，並將服務部屬至雲端平台。最後，我們來個實戰演練，考驗你在各種釣魚網站的誘惑之下，是不是都能安全過關</div>
+              		<br>
+              		<div class="speaker">Jerry</div>
+              	</div>
+              </td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Inndy.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">逆向工程：從入門到放棄</div>
+              		<div class="description hide">想要學習逆向工程卻不知道該從何入手嗎？這場演講將會帶你進入逆向工程的領域，了解基本概念以及基礎的心法與知識</div>
+              		<br>
+              		<div class="speaker">Inndy</div>
+              	</div>
+              </td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Gent.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">校園物聯網滲透</div>
+              		<div class="description hide">針對校園的物聯網設備進行簡單的滲透測試，分享歷程經歷</div>
+              		<br>
+              		<div class="speaker">Gent</div>
+              	</div>
+              </td>
             </tr>
             <tr>
-              <td class="content-bg">神秘議程</td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/TDOHConf.png" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">反抗無用，接受進步</div>
+              		<div class="description hide">We are Borg</div>
+              		<br>
+              		<div class="speaker">博格企業讀書會</div>
+              	</div>
+              </td>
             </tr>
 
             <tr>
@@ -128,12 +333,39 @@
 
             <tr>
               <td  width="10%" rowspan="2">16:55~17:45</td>
-              <td class="content-bg" rowspan="2">他山之石:從中共戰略支援部隊看我國資電軍未來發展</td>
-              <td class="content-bg">APP檢測之經驗分享</td>
+              <td class="content-bg link" rowspan="2" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Linyingyou.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">他山之石:從中共戰略支援部隊看我國資電軍未來發展</div>
+              		<div class="description hide">2015年11月，中共中央軍委改革工作會議上開始逐步改革，而在2016年1月逐步落實軍委機關改制，並將二砲部隊正名為火箭軍以及成立新的戰略支援部隊。隨著新聞的發佈，關於大軍區改戰區、以及軍委組織的改革新聞都陸續出現，但對於戰略支援部隊的敘述卻相當有限。中共對外發佈的資訊中透露出戰略支援部隊負責統一掌管情報、網路作戰、指管系統等建構一體化聯合作戰的關鍵要素，搶佔此一新的戰略制高點。本文以戰略支援部隊所包含的任務屬性，探討其在整合的目的，以及其運作的方式，嘗試對我國資電部隊(第四軍種)的未來做出探討 </div>
+              		<br>
+              		<div class="speaker">林穎佑</div>
+              	</div>
+              </td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Feifei.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">APP檢測之經驗分享</div>
+              		<div class="description hide">在打工的生涯當中，以APP檢測的經驗最為有趣，APP有百百種，要如何透過charles工具來檢測APP呢，此次Talk將分享使用charles檢測APP時遇到狀況。</div>
+              		<br>
+              		<div class="speaker">飛飛</div>
+              	</div>
+              </td>
               <td class="content-bg" rowspan="2">N/A</td>
             </tr>
             <tr>
-              <td class="content-bg">從打Bug bounty到VIP會員</td>
+              <td class="content-bg link" href="#mfp-popup-program">
+              	<div class="avatar"><img src="img/speaker-avatar/Guojingtang.jpg" /></div>
+              	<div class="data" data-briefing="">
+              	<div class="data">
+              		<div class="data-title">從打Bug Bounty到VIP會員</div>
+              		<div class="description hide">覺得打Bug Bounty很難嗎? 其實一點都不難！<br>本議程將介紹如何挑選Bug Bounty並介紹幾個打Bug Bounty的思路<br>看我第一次打Bug Bounty就上手並且如何得到VIP會員</div>
+              		<br>
+              		<div class="speaker">郭璟塘</div>
+              	</div>
+              </td>
             </tr>
 
             <tr>
@@ -152,7 +384,7 @@
             </tr>
 
             <tr>
-              <td class="content-bg" colspan="4">台鐵往台北末班車 19:50<br>高鐵末班車 22:21</td>
+              <td class="content-bg" colspan="4">臺鐵往台北末班車 19:50<br>高鐵往南港末班車 22:21</td>
             </tr>
           </tbody>
         </table>
@@ -160,6 +392,9 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Magnific Popup core JS file -->
+		<script src="magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="tdoh.js"></script>
     <script>
       $.get('navbar.html',function(data){
         $('body').prepend(data);
