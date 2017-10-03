@@ -247,6 +247,10 @@ tbody > tr > td:nth-child(1):not(.content-bg){
     margin-bottom: 15px;
 }
 
+.link {
+  cursor: pointer;
+}
+
 @media (max-width: 50em) {
   .staff .content h3 {
     height: 75px;
