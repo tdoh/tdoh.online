@@ -12,7 +12,7 @@ jQuery(document).ready(function(){
 		    	if( briefing != undefined && briefing != '' ){
 		    		jQuery('#mfp-popup-program .data-briefing').html('<a target="_blank" href="'+ briefing +'">檢視</a>');
 		    	} else {
-		    		jQuery('#mfp-popup-program .data-briefing').text('未提供');
+		    		jQuery('#mfp-popup-program .data-briefing').text('尚未提供');
 		    	}
 		    	jQuery('#mfp-popup-program .data-speaker').text( jQuery(this.st.el).find('.speaker').text() );
 		    },
