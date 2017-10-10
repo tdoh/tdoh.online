@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+  	<link rel="icon" type="image/png" href="http://tdoh-conf.online/img/logo.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TDOH Conf 2017</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106534345-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106534345-1');
+    </script>
+  </head>
+  <body class="bg2">
+    <div class="container">
+
+      <div class="hm title align-middle">
+        <h2 class="stitle btitle align-middle hm">場地平面圖</h2>
+      </div>
+
+      <div class="content hm">
+      	<img src="img/B1.jpg" width=100% />
+      </div>
+      <div class="content hm">
+      	<img src="img/1F.jpg" width=100% />
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $.get('navbar.html',function(data){
+        $('body').prepend(data);
+        $('.nav-item:nth-child(6)').addClass("active");
+      });
+      $.get('footer.html',function(data){$('body').append(data)});
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
