@@ -9,10 +9,12 @@ jQuery(document).ready(function(){
 		    	/*jQuery('#mfp-popup-program .avator').html( jQuery(this.st.el).find('.avatar').html() );*/
 		    	jQuery('#mfp-popup-program .data-title').html( jQuery(this.st.el).find('.data-title').html() );
 		    	jQuery('#mfp-popup-program .data-description').html( jQuery(this.st.el).find('.description').html() );
-		    	if( briefing != undefined && briefing != '' ){
-		    		jQuery('#mfp-popup-program .data-briefing').html('<a target="_blank" href="'+ briefing +'">檢視</a>');
-		    	} else {
-		    		jQuery('#mfp-popup-program .data-briefing').text('尚未提供');
+		    	if( briefing != undefined && briefing == 'NA' ){
+                    jQuery('#mfp-popup-program .data-briefing').text('不提供');
+		    	} else if( briefing != undefined && briefing != '' && briefing != 'NA'){
+                    jQuery('#mfp-popup-program .data-briefing').html('<a target="_blank" href="'+ briefing +'">檢視</a>');
+                } else {
+		    		jQuery('#mfp-popup-program .data-briefing').text('敬請期待');
 		    	}
 		    	jQuery('#mfp-popup-program .data-speaker').text( jQuery(this.st.el).find('.speaker').text() );
 		    },
