@@ -2,14 +2,15 @@
   <div id="app">
     <router-view />
     <Footer />
+    <Navbar />
   </div>
 </template>
 
 <script>
-import Footer from '@/components/Footer'
+import layout from '@/components/layout'
 export default {
   components: {
-    Footer
+    ...layout
   }
 }
 </script>
