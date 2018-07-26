@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navbar :isToggle="isToggle" />
-    <router-view />
+    <router-view class="page-container" />
     <Footer />
   </div>
 </template>
@@ -31,7 +31,7 @@ export default {
       }
     },
     scrollHandler (event) {
-      this.isToggle = event.pageY >= document.documentElement.clientHeight - 244
+      this.isToggle = (event.pageY || window.scrollY) >= document.documentElement.clientHeight - 244
     }
   },
   watch: {
