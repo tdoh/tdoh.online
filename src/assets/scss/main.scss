@@ -1,5 +1,11 @@
 @import 'reset';
+@import 'color';
 
 @import 'page';
 @import 'navbar';
 @import 'header';
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
