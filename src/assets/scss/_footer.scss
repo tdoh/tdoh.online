@@ -1,0 +1,15 @@
+#footer {
+  background-image: url('./assets/images/footer.png');
+  background-size: cover;
+  background-position: center;
+  height: 6rem;
+  width: 100%;
+  background-color: $dark;
+  color: $gold;
+  text-shadow: 0 0 10px $gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10pt;
+  opacity: 0.9;
+}
