@@ -9,6 +9,9 @@
   @media screen and (max-width: 320px) {
     background-size: 120%;
   }
+  @media screen and (max-width: 360px) and (max-height: 700px) {
+    background-size: cover;
+  }
 }
 
 .tag {
