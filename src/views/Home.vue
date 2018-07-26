@@ -12,6 +12,7 @@
             <p>地點：蓮潭國際會館</p>
           </div>
           <a href="" class="button" target="_blank">8／18 早鳥票開跑</a>
+          <Counter v-if="new Date('2018-08-18').getTime() > new Date().getTime()" />
         </div>
       </div>
     </div>
@@ -19,7 +20,10 @@
 </template>
 
 <script>
+import layout from '@/components/layout'
 export default {
-  //
+  components: {
+    Counter: layout.Counter
+  }
 }
 </script>

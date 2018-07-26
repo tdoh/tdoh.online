@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar :isToggle="isToggle" />
+    <Navbar v-if="new Date('2018-08-18').getTime() <= new Date().getTime()" :isToggle="isToggle" />
     <router-view class="page-container" />
     <Footer />
   </div>
