@@ -56,7 +56,7 @@ const router = new Router({
       component: views.Team
     },
     {
-      path: '/',
+      path: '/map',
       name: 'FloorMap',
       meta: {
         label: '場地平面圖'
