@@ -1,0 +1,28 @@
+.paper {
+  background-image: url('./assets/images/paper.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tag {
+  background-color: $dark;
+  color: $gold;
+  font-size: inhert;
+  padding: 5px 7px;
+  border-radius: 3px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: $dark;
+  text-decoration: none;
+  padding: .7rem 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: $white;
+}
