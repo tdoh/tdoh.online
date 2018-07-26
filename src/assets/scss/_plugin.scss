@@ -3,6 +3,12 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  @media screen and (max-width: 1023px) {
+    background-image: url('./assets/images/paper-mobile.png');    
+  }
+  @media screen and (max-width: 320px) {
+    background-size: 120%;
+  }
 }
 
 .tag {

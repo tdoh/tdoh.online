@@ -4,35 +4,68 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;  
+  }
   .container {
     width: 50rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    // transform: translateY(-4rem);
+    @media screen and (max-width: 1023px) {
+      flex-direction: column;  
+    }
     #logo {
       width: 333px;
       height: 381px;
+      @media screen and (max-width: 1023px) {
+        flex-direction: column;
+        width: calc(333px * .75);
+        height: calc(381px * .75);
+      }
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+        width: calc(333px * .5);
+        height: calc(381px * .5);
+      }
     }
     .content {
       color: $dark;
       .title-box {
         margin: 1rem 0;
+        @media screen and (max-width: 375px) {
+          margin: .5rem 0;
+        }
       }
       h1 {
         font-size: 84px;
+        @media screen and (max-width: 500px) {
+          font-size: 72px;
+        }
       }
       h2 {
         font-size: 48px;
+        @media screen and (max-width: 375px) {
+          font-size: 36px;
+        }
       }
       h3 {
         font-size: 24px;
+        @media screen and (max-width: 375px) {
+          font-size: 20px;
+        }
       }
       p {
         font-size: 16px;
         line-height: 1.6;
         font-weight: 600;
+        @media screen and (max-width: 500px) {
+          line-height: 1.4;
+        }
+        @media screen and (max-width: 375px) {
+          font-size: 14px;
+        }
       }
     }
   }
