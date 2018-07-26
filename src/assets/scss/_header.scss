@@ -10,7 +10,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    transform: translateY(-4rem);
+    // transform: translateY(-4rem);
     #logo {
       width: 333px;
       height: 381px;
@@ -28,6 +28,11 @@
       }
       h3 {
         font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 600;
       }
     }
   }
