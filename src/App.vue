@@ -11,7 +11,9 @@ import layout from '@/components/layout'
 export default {
   data () {
     return {
-      isToggle: false
+      isToggle: false,
+      keyListCode: '',
+      masterKeyCodeString: '38384040373937396665'
     }
   },
   components: {
@@ -19,6 +21,7 @@ export default {
   },
   mounted () {
     this.scrollAnimate()
+    document.addEventListener('keydown', this.eggHandler)
   },
   methods: {
     scrollAnimate () {
@@ -32,6 +35,12 @@ export default {
     },
     scrollHandler (event) {
       this.isToggle = (event.pageY || window.scrollY) >= document.documentElement.clientHeight - 244
+    },
+    eggHandler (event) {
+      this.keyListCode += event.keyCode
+      if (this.keyListCode.indexOf(this.masterKeyCodeString) > -1) {
+        window.location = '/static/img/fuck_b1@ck_Sh0ve1.jpg'
+      }
     }
   },
   watch: {
