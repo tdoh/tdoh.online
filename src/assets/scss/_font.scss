@@ -60,3 +60,20 @@ span {
   font-weight: 400;
   letter-spacing: 1px;
 }
+
+.italic {
+  font-style: italic;
+}
+
+.says {
+  font-style: italic;
+  opacity: .7;
+}
+
+.hide {
+  color: transparent;
+  &::selection {
+    background: $black;
+    color: $gold;
+  }
+}
