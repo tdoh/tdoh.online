@@ -1,9 +1,15 @@
 .spotlight {
   min-height: 100vh;
-  width: 768px;
+  max-width: 768px;
   display: flex;
-  margin: 0 calc((100% - 768px) / 2);
+  margin: 0 auto;
   flex-direction: column;
+  margin-top: 150px;
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+    margin: 1rem;
+    margin-top: 60px;
+  }
   &-box {
     display: flex;
     flex-direction: column;
@@ -47,6 +53,25 @@
       }
       &.center {
         text-align: center;
+      }
+    }
+  }
+  &-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img.map {
+      position: absolute;
+      width: 1024px;
+      transform: scale(1.25);
+      z-index: 0;
+    }
+    iframe {
+      width: 800px;
+      height: 540px;
+      z-index: 1;
+      @media screen and (max-width: 1024px) {
+        width: 100%;
       }
     }
   }
