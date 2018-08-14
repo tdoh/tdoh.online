@@ -36,9 +36,17 @@ export default {
   mounted () {
     setInterval(() => { this.countTime() }, 1000)
   },
+  props: {
+    endDate: {
+      default: () => {
+        return new Date()
+      },
+      type: [Date, String]
+    }
+  },
   methods: {
     countTime () {
-      this.distance = new Date('2018-08-18').getTime() - new Date()
+      this.distance = new Date(this.endDate).getTime() - new Date()
       this.day = Math.floor(this.distance / (1000 * 60 * 60 * 24))
       this.hour = Math.floor((this.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
       this.min = Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60))
