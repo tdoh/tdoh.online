@@ -1,0 +1,53 @@
+.spotlight {
+  min-height: 100vh;
+  width: 768px;
+  display: flex;
+  margin: 0 calc((100% - 768px) / 2);
+  flex-direction: column;
+  &-box {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    color: $white;
+    .title {
+      background: -webkit-linear-gradient(transparent, $gold 85%, transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 10px $gold);
+      font-size: 28pt;
+      text-align: center;
+      margin: 1rem;
+      &.symbol {
+        &:before, &:after {
+          content: '';
+          border: 1px solid $gold;
+          box-sizing: border-box;
+          border-image: linear-gradient(to right bottom, $gold, rgba($gold, .2)) 1;
+          position: absolute;
+          height: 28pt;
+          width: 28pt;
+        }
+        &:before {
+          transform: translateX(-25pt) rotate(-45deg);
+        }
+        &:after {
+          transform: translateX(-3pt) rotate(135deg);
+        }
+      }
+    }
+    .content {
+      margin: 2rem 1rem;
+      &:not(.no-indent) p {
+        text-indent: 24pt;
+      }
+      p {
+        font-size: 12pt;
+        line-height: 1.6;
+        margin: 1rem 0;
+      }
+      &.center {
+        text-align: center;
+      }
+    }
+  }
+}
