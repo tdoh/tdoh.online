@@ -63,7 +63,10 @@ const router = new Router({
       },
       component: views.FloorMap
     }
-  ]
+  ],
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 })
 
 export default router
