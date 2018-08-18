@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar :isToggle="isToggle" />
+    <Navbar v-if="false" :isToggle="isToggle" />
     <router-view class="page-container" />
     <Footer />
   </div>

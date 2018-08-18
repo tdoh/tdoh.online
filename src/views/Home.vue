@@ -11,12 +11,12 @@
             <h3>駭客地下城</h3>
             <p>地點：<a href="https://ppt.cc/fgKQWx">高雄蓮潭國際會館</a></p>
           </div>
-          <a href="" class="button" target="_blank">8 / 18 早鳥票預購開跑</a>
+          <a href="https://tdohackerparty.kktix.cc/events/tdoh-conf-2018" class="button" target="_blank">8 / 18 早鳥票預購開跑</a>
           <Counter :endDate="endDate" v-if="endDate.getTime() > new Date().getTime()" />
         </div>
       </div>
     </div>
-    <div class="spotlight">
+    <div v-if="false" class="spotlight">
       <div class="spotlight-box">
         <h1 class="title symbol">關於 TDOHacker</h1>
         <div class="content">
