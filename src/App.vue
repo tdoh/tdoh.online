@@ -7,7 +7,11 @@
         <span>{{ $route.meta.label || $route.name }}</span>
       </h1>
     </div>
-    <router-view class="page-container" />
+    <transition :name="transitionMode">
+      <keep-alive>
+        <router-view class="page-container" />
+      </keep-alive>
+    </transition>
     <Footer />
   </div>
 </template>
@@ -19,6 +23,7 @@ export default {
     return {
       isMobile: document.querySelector('#app').offsetWidth <= 1440,
       isToggle: false,
+      transitionMode: 'slide-left',
       keyListCode: '',
       masterKeyCodeString: '38384040373937396665'
     }
@@ -64,8 +69,11 @@ export default {
     }
   },
   watch: {
-    $route: function () {
+    $route (to, from) {
       this.scrollAnimate()
+      const toDepth = to.meta.index
+      const fromDepth = from.meta.index
+      this.transitionMode = toDepth < fromDepth ? 'slide-right' : 'slide-left'
     }
   }
 }

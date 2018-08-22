@@ -11,7 +11,8 @@ const router = new Router({
       path: '/',
       name: 'Home',
       meta: {
-        label: '首頁'
+        label: '首頁',
+        index: 0
       },
       component: views.Home
     },
@@ -19,7 +20,8 @@ const router = new Router({
       path: '/active',
       name: 'Active',
       meta: {
-        label: '大會活動'
+        label: '大會活動',
+        index: 1
       },
       component: views.Active
     },
@@ -27,7 +29,8 @@ const router = new Router({
       path: '/agenda',
       name: 'Agenda',
       meta: {
-        label: '議程資訊'
+        label: '議程資訊',
+        index: 2
       },
       component: views.Agenda
     },
@@ -35,7 +38,8 @@ const router = new Router({
       path: '/traffic',
       name: 'Traffic',
       meta: {
-        label: '交通資訊'
+        label: '交通資訊',
+        index: 3
       },
       component: views.Traffic
     },
@@ -43,7 +47,8 @@ const router = new Router({
       path: '/support',
       name: 'Support',
       meta: {
-        label: '協辦單位'
+        label: '協辦單位',
+        index: 4
       },
       component: views.Support
     },
@@ -51,7 +56,8 @@ const router = new Router({
       path: '/team',
       name: 'Team',
       meta: {
-        label: '工作團隊'
+        label: '工作團隊',
+        index: 5
       },
       component: views.Team
     },
@@ -59,7 +65,8 @@ const router = new Router({
       path: '/map',
       name: 'FloorMap',
       meta: {
-        label: '場地平面圖'
+        label: '場地平面圖',
+        index: 6
       },
       component: views.FloorMap
     }
