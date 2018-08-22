@@ -13,10 +13,12 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
+import layout from '@/components/layout'
 export default {
   data () {
     return {
@@ -63,6 +65,9 @@ export default {
         }
       ]
     }
+  },
+  components: {
+    ...layout
   }
 }
 </script>

@@ -52,6 +52,7 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -64,7 +65,7 @@ export default {
     }
   },
   components: {
-    Counter: layout.Counter
+    ...layout
   }
 }
 </script>

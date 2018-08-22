@@ -3,7 +3,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  filter: drop-shadow(0 0 3rem rgba($gold, .5));
+  // filter: drop-shadow(0 0 3rem rgba($gold, .5));
   @media screen and (max-width: 1023px) {
     background-image: url('./assets/images/paper-mobile.png');
     background-size: cover;

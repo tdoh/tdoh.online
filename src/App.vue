@@ -12,7 +12,6 @@
         <router-view class="page-container" />
       </keep-alive>
     </transition>
-    <Footer />
   </div>
 </template>
 
