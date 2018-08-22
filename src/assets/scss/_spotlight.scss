@@ -67,12 +67,9 @@
         text-indent: 24pt;
       }
       p {
-        font-size: 12pt;
+        font-size: 14pt;
         line-height: 1.6;
         margin: 1rem 0;
-        @media screen and (max-width: 1440px) {
-          font-size: 12pt;
-        }
       }
       &.center {
         text-align: center;
