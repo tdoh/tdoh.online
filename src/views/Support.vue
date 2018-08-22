@@ -6,7 +6,7 @@
         <div class="content" v-for="(item, index) in support.list" :key="index">
           <div class="card">
             <a :href="item.link ? item.link : null" target="_blank">
-              <img :src="item.image" alt="">
+              <img v-if="item.image" :src="item.image" alt="">
               <p>{{ item.title }}</p>
             </a>
           </div>
@@ -37,9 +37,7 @@ export default {
           type: '承辦單位',
           list: [
             {
-              title: '臺灣校園資訊安全推廣暨駭客培育協會',
-              image: '',
-              link: ''
+              title: '臺灣校園資訊安全推廣暨駭客培育協會'
             }
           ]
         },
