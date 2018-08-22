@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <Navbar v-if="false" :isToggle="isToggle" />
+    <Navbar :isToggle="isToggle" :isMobile="isMobile" />
+    <h1 v-if="$route.name !== 'Home' && isMobile" class="head">
+      <img src="@/assets/images/icon/menu-active-gold.png" />
+      <span>{{ $route.meta.label || $route.name }}</span>
+    </h1>
     <router-view class="page-container" />
     <Footer />
   </div>
@@ -11,6 +15,7 @@ import layout from '@/components/layout'
 export default {
   data () {
     return {
+      isMobile: document.querySelector('#app').offsetWidth <= 1440,
       isToggle: false,
       keyListCode: '',
       masterKeyCodeString: '38384040373937396665'
@@ -20,8 +25,15 @@ export default {
     ...layout
   },
   mounted () {
-    this.scrollAnimate()
+    if (!this.isMobile) {
+      this.scrollAnimate()
+    } else {
+      this.isToggle = false
+    }
     document.addEventListener('keydown', this.eggHandler)
+    window.addEventListener('resize', () => {
+      window.location = window.location
+    })
   },
   methods: {
     scrollAnimate () {

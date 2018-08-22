@@ -9,3 +9,28 @@
   background-size: cover;
   z-index: 0;
 }
+
+h1.head {
+  z-index: 10;
+  position: absolute;
+  margin: 1rem auto;
+  width: 100%;
+  text-align: center;
+  color: $dark;
+  filter: drop-shadow(0 0 10px $gold);
+  background: -webkit-linear-gradient(rgba($white, .1), $white 85%, rgba($white, .1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba($white, .5);
+  span {
+    z-index: 1;
+  }
+  img {
+    height: 500px;
+    width: 500px;
+    z-index: -1;
+    position: absolute;
+    top: -390px;
+    left: calc(50% - 250px);
+    opacity: .6;
+  }
+}

@@ -1,6 +1,14 @@
 <template>
   <div id="nav">
-    <ul :class="{ 'toggle': isToggle }">
+    <ul :class="{ 'toggle': isMobile ? mobileToggle : isToggle }">
+      <div class="toggle-button" @click="mobileToggle = !mobileToggle">
+        <div class="icon">
+          <div class="block block-1"></div>
+          <div class="block block-2"></div>
+          <div class="block block-3"></div>
+          <div class="block block-4"></div>
+        </div>
+      </div>
       <img src="@/assets/images/icon/menu-active-gold.png" alt="" :class="`at-${activePage}`">
       <li v-for="(item, index) in menuItem" :key="index">
         <router-link :to="item.path">
@@ -15,12 +23,17 @@
 export default {
   data () {
     return {
+      mobileToggle: false,
       activePage: 0,
       menuItem: this.$router.options.routes
     }
   },
   props: {
     isToggle: {
+      default: false,
+      type: Boolean
+    },
+    isMobile: {
       default: false,
       type: Boolean
     }
@@ -36,6 +49,7 @@ export default {
   watch: {
     $route: function () {
       this.getActivePage()
+      this.mobileToggle = false
     }
   }
 }

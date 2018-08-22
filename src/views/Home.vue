@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div v-if="false" class="spotlight">
+    <div class="spotlight">
       <div class="spotlight-box">
         <h1 class="title symbol">關於 TDOHacker</h1>
         <div class="content">

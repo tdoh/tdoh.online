@@ -10,34 +10,49 @@
     margin: 1rem;
     margin-top: 60px;
   }
+  @media screen and (max-width: 1440px) {
+    margin-top: 5rem;
+  }
   &-box {
     display: flex;
     flex-direction: column;
     margin: 5rem 2rem;
     color: $white;
+    @media screen and (max-width: 1440px) {
+      margin: 1rem 0;
+    }
     .title {
-      background: -webkit-linear-gradient(transparent, $gold 85%, transparent);
+      z-index: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: -webkit-linear-gradient(rgba($gold, .1), $gold 85%, rgba($gold, .1));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       filter: drop-shadow(0 0 10px $gold);
       font-size: 28pt;
       text-align: center;
-      margin: 1rem;
+      padding: 1rem;
+      @media screen and (max-width: 1440px) {
+        font-size: 22pt;
+      }
       &.symbol {
         &:before, &:after {
+          z-index: 0;
           content: '';
           border: 1px solid $gold;
           box-sizing: border-box;
           border-image: linear-gradient(to right bottom, $gold, rgba($gold, .2)) 1;
-          position: absolute;
+          // position: absolute;
           height: 28pt;
           width: 28pt;
         }
         &:before {
-          transform: translateX(-25pt) rotate(-45deg);
+          transform: rotate(-45deg);
         }
         &:after {
-          transform: translateX(-3pt) rotate(135deg);
+          transform: rotate(135deg);
         }
       }
     }
@@ -50,9 +65,36 @@
         font-size: 12pt;
         line-height: 1.6;
         margin: 1rem 0;
+        @media screen and (max-width: 1440px) {
+          font-size: 12pt;
+        }
       }
       &.center {
         text-align: center;
+      }
+      .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        a {
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+        img {
+          height: 250px;
+          margin: auto;
+        }
+        p {
+          background: -webkit-linear-gradient(rgba($gold, .1), $gold 85%, rgba($gold, .1));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          filter: drop-shadow(0 0 10px $gold);
+          font-size: 16pt;
+          text-align: center;
+          text-indent: 0;
+        }
       }
     }
   }
@@ -65,6 +107,9 @@
       width: 1024px;
       transform: scale(1.25);
       z-index: 0;
+      @media screen and (max-width: 1440px) {
+        display: none;
+      }
     }
     iframe {
       width: 800px;
