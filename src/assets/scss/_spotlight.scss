@@ -112,7 +112,7 @@
       position: absolute;
       width: 1024px;
       transform: scale(1.25);
-      z-index: 0;
+      z-index: -1;
       filter: drop-shadow(0 0 3rem rgba($gold, .5));
       @media screen and (max-width: 1440px) {
         display: none;
