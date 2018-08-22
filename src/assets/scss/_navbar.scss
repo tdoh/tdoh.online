@@ -201,14 +201,18 @@
           filter: drop-shadow(0 0 10px rgba($black, 1));
         }
         @media screen and (max-width: 1440px) {
-          background: -webkit-linear-gradient(rgba($white, .1), $white 85%, rgba($white, .1));
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          &.router-link-exact-active {
-            filter: drop-shadow(0 0 10px $gold);
-            background: -webkit-linear-gradient(rgba($gold, .1), $gold 85%, rgba($gold, .1));
+          span {
+            background: -webkit-linear-gradient(rgba($white, .3), $white 85%, rgba($white, .1));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+          }
+          &.router-link-exact-active {
+            filter: drop-shadow(0 0 10px $gold);
+            span {
+              background: -webkit-linear-gradient(rgba($gold, .1), $gold 85%, rgba($gold, .1));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
             &:before, &:after {
               content: '';
               border: 1px solid $gold;

@@ -2,7 +2,7 @@
   <div>
     <div class="spotlight">
       <div class="spotlight-box">
-        <h1 class="title symbol">工作團隊</h1>
+        <h1 class="title symbol"><span>工作團隊</span></h1>
       </div>
     </div>
   </div>

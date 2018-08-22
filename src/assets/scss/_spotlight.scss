@@ -27,13 +27,16 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      background: -webkit-linear-gradient(rgba($gold, .1), $gold 85%, rgba($gold, .1));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 10px $gold);
+      color: $gold;
       font-size: 28pt;
       text-align: center;
       padding: 1rem;
+      span {
+        background: -webkit-linear-gradient(rgba($gold, .1), $gold 85%, rgba($gold, .1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 10px $gold);
+      }
       @media screen and (max-width: 1440px) {
         font-size: 22pt;
       }
