@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <Navbar :isToggle="isToggle" :isMobile="isMobile" />
-    <h1 v-if="$route.name !== 'Home' && isMobile" class="head">
+    <div class="head" v-if="$route.name !== 'Home' && isMobile">
       <img src="@/assets/images/icon/menu-active-gold.png" />
-      <span>{{ $route.meta.label || $route.name }}</span>
-    </h1>
+      <h1>
+        <span>{{ $route.meta.label || $route.name }}</span>
+      </h1>
+    </div>
     <router-view class="page-container" />
     <Footer />
   </div>

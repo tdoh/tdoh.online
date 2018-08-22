@@ -11,7 +11,7 @@
     margin-top: 60px;
   }
   @media screen and (max-width: 1440px) {
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
   &-box {
     display: flex;
@@ -39,6 +39,9 @@
       }
       @media screen and (max-width: 1440px) {
         font-size: 22pt;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 20pt;
       }
       &.symbol {
         &:before, &:after {

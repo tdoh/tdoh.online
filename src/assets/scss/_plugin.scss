@@ -4,7 +4,8 @@
   background-position: center;
   background-repeat: no-repeat;
   @media screen and (max-width: 1023px) {
-    background-image: url('./assets/images/paper-mobile.png');    
+    background-image: url('./assets/images/paper-mobile.png');
+    background-size: cover;
   }
   @media screen and (max-width: 320px) {
     background-size: 120%;
@@ -19,7 +20,6 @@
   color: $gold;
   font-size: inhert;
   padding: 2px 7px;
-  
   border-radius: 3px;
   display: inline-flex;
   justify-content: center;
