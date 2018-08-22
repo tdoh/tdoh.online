@@ -33,11 +33,9 @@ export default {
     document.addEventListener('keydown', this.eggHandler)
     window.addEventListener('resize', () => {
       if (document.querySelector('#app').offsetWidth <= 1440) {
-        console.log('mobile')
         this.isMobile = true
         document.removeEventListener('scroll', this.scrollHandler)
       } else {
-        console.log('desktop')
         this.isMobile = false
         this.scrollAnimate()
       }
