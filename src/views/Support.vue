@@ -2,7 +2,7 @@
   <div>
     <div class="spotlight">
       <div class="spotlight-box" v-for="(support, index) in supports" :key="index">
-        <h1 class="title symbol">{{ support.type }}</h1>
+        <h1 class="title symbol"><span>{{ support.type }}</span></h1>
         <div class="content" v-for="(item, index) in support.list" :key="index">
           <div class="card">
             <a :href="item.link ? item.link : null" target="_blank">
