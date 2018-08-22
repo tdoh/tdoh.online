@@ -1,6 +1,6 @@
 .spotlight {
   min-height: 100vh;
-  max-width: 768px;
+  max-width: 800px;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
@@ -50,7 +50,6 @@
           border: 1px solid $gold;
           box-sizing: border-box;
           border-image: linear-gradient(to right bottom, $gold, rgba($gold, .2)) 1;
-          // position: absolute;
           height: 28pt;
           width: 28pt;
         }
@@ -123,6 +122,218 @@
       z-index: 1;
       @media screen and (max-width: 1024px) {
         width: 100%;
+      }
+    }
+  }
+  &-table {
+    margin: 5rem 0;
+    width: 768px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1rem repeat(26, 2.5rem);
+    grid-template-columns: 4rem repeat(4, 1fr);
+    grid-template-areas:
+      "blank room-A     room-B     room-C     room-D"
+      "time  admission  admission  admission  admission"
+      "time  start      start      start      start"
+      "time  break-1    break-1    break-1    break-1"
+      /* --------------------------------------------- */
+      "time  session-1A session-1B session-1C session-1D"
+      "time  session-1A session-1B break-2    session-1D"
+      "time  session-1A session-1B session-2C session-1D"
+      "time  break-3    break-3    break-3    session-1D"
+      /* --------------------------------------------- */
+      "time  session-2A session-2B session-3C session-1D"
+      "time  session-2A session-2B break-4    session-1D"
+      "time  session-2A session-2B session-4C session-1D"
+      "time  break-5    break-5    break-5    session-1D"
+      /* --------------------------------------------- */
+      "time  session-3A session-3B session-5C session-1D"
+      "time  session-3A session-3B break-6    session-1D"
+      "time  session-3A session-3B session-6C session-1D"
+      "time  break-7    break-7    break-7    break-7"
+      /* --------------------------------------------- */
+      "time  session-4A session-4B session-7C session-2D"
+      "time  session-4A session-4B break-8    session-2D"
+      "time  session-4A session-4B session-8C session-2D"
+      "time  break-9    break-9    break-9    session-2D"
+      /* --------------------------------------------- */
+      "time  session-5A session-5B session-9C session-2D"
+      "time  session-5A session-5B session-9C session-2D"
+      "time  session-5A session-5B session-9C session-2D"
+      /* --------------------------------------------- */
+      "time  break-a    break-a    session-9C session-2D"
+      "time  lighting   lighting   session-9C session-2D"
+      "time  closing    closing    session-9C session-2D"
+      /* --------------------------------------------- */
+      "time  ending     ending     ending     ending";
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    grid-gap: 2px;
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      overflow: visible;
+      grid-template-rows: repeat(3, 2rem) repeat(13, 5rem) 2rem repeat(8, 5rem) repeat(6, 2rem);
+      grid-template-columns: 3rem 1fr;
+      grid-template-areas:
+        "time-0  admission"
+        "time-1  start"
+        "time-2  break-1"
+        /* ------------ */
+        "time-3  session-1A"
+        "time-3  session-1B"
+        "time-3  session-1C"
+        "time-3  session-1D"
+        /* ------------ */
+        "time-4  session-2C"
+        /* ------------ */
+        "time-5  session-2A"
+        "time-5  session-2B"
+        "time-5  session-3C"
+        /* ------------ */
+        "time-6  session-4C"
+        /* ------------ */
+        "time-7  session-3A"
+        "time-7  session-3B"
+        "time-7  session-5C"
+        /* ------------ */
+        "time-8  session-6C"
+        /* ------------ */
+        "time-9  break-7"
+        /* ------------ */
+        "time-10  session-4A"
+        "time-10  session-4B"
+        "time-10  session-7C"
+        "time-10  session-2D"
+        /* ------------ */
+        "time-11  session-8C"
+        /* ------------ */
+        "time-12  session-5A"
+        "time-12  session-5B"
+        "time-12  session-9C"
+        /* ------------ */
+        "time-13  break-a"
+        /* ------------ */
+        "time-14  lighting"
+        "time-15  closing"
+        /* ------------ */
+        "time-16  ending";
+    } 
+    .time-container {
+      z-index: 0;
+      grid-area: time;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+      .time {
+        height: 100%;
+        transform: translateY(calc(-2.5rem / 2 - 1px));
+      }
+    }
+    .event {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    .session, .main, .break {
+      background: $gold;
+      color: $dark;
+      @media screen and (max-width: 800px) {
+        background: none;
+        color: $white;
+      }
+    }
+    .mobileTime {
+      height: 1rem;
+      transform: translateY(-.5rem);
+      &:before {
+        content: '';
+        position: absolute;
+        background: $gold;
+        height: 7px;
+        width: 7px;
+        left: 100%;
+        transform: translateX(.5rem) rotate(45deg);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        border: 1px solid $gold;
+        border-image: linear-gradient(to right bottom, $gold, rgba($gold, .2)) 1;
+        width: calc(100vw - 6rem);
+        left: 100%;
+        transform: translateX(.5rem);
+      }
+      @media screen and (min-width: 800px) {
+        display: none;
+      }
+    }
+    .room, .break, .blank {
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+    .break {
+      @media screen and (max-width: 800px) {
+        &-1, &-7, &-a {
+          display: inherit;
+        }
+      } 
+    }
+    .session {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      font-size: 12pt;
+      position: relative;
+      @media screen and (max-width: 800px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        text-align: left;
+        .info {
+          width: calc(100% - 4rem);
+        }
+        .box {
+          display: inline-flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          p {
+            margin-right: .5rem;
+          }
+        }
+      }
+      .room, .time {
+        display: none;
+        @media screen and (max-width: 800px) {
+          display: inline-flex;
+        }
+      }
+      .time {
+        justify-content: flex-end;
+        width: 5rem;
+      }
+      .tag {
+        margin: .5rem 0;
+        @media screen and (max-width: 800px) {
+          background-color: $gold;
+          color: $dark;
+        }
+      }
+      hr {
+        width: 1rem;
+        color: $dark;
+        @media screen and (max-width: 800px) {
+          display: none;
+        }
       }
     }
   }
