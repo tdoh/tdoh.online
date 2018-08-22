@@ -4,7 +4,7 @@
       <div class="container">
         <img id="logo" src="../assets/images/logo-big.png" alt="">
         <div class="content">
-          <p class="tag">9 / 29</p>
+          <p class="tag">9 / 29 10:00 ~ 16:30</p>
           <div class="title-box">
             <h2>TDOH Conf</h2>
             <h1>2018</h1>
