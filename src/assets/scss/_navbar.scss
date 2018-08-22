@@ -101,6 +101,7 @@
         width: 100vw;
         height: 100vh;
         background: linear-gradient(left, transparent, $dark);
+        background: -webkit-linear-gradient(left, transparent, $dark);
         transition: ease-in-out all .3s;
         display: none;
       }
