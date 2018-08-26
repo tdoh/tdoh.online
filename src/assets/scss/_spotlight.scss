@@ -18,6 +18,9 @@
     flex-direction: column;
     margin: 5rem 2rem;
     color: $white;
+    &.member {
+      margin: 2rem;
+    }
     @media screen and (max-width: 1440px) {
       margin: 1rem 0;
     }
@@ -331,6 +334,20 @@
         @media screen and (max-width: 800px) {
           display: none;
         }
+      }
+    }
+  }
+  &-member {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .member {
+      margin: 1rem .5rem;
+      p {
+        margin: .25rem;
+        text-align: center;
       }
     }
   }
