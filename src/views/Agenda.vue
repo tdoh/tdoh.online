@@ -13,7 +13,7 @@
         <div class="event room" v-for="room in agenda.room" :key="`room-${room.id}`" :style="{ 'grid-area': `room-${room.id}` }">
           <p>{{ room.name }}</p>
         </div>
-        <div class="event session" v-for="session in agenda.session" :key="`session-${session.id}`" :style="{ 'grid-area': `session-${session.id}` }">
+        <div class="event session" v-for="(session, index) in agenda.session" :key="`session-${session.id}`" @click="nowFocusSessionIndex = index" :style="{ 'grid-area': `session-${session.id}` }">
           <div class="info">
             <div class="box">
               <p class="room tag">{{ agenda.room.filter(e => (e.id === session.id[1]))[0].name }}</p>
@@ -33,6 +33,23 @@
         <div class="event blank"></div>
       </div>
     </div>
+    <div class="fullscreen-container" v-if="nowFocusSessionIndex !== ''">
+      <div class="fullscreen-close" @click="nowFocusSessionIndex = ''">
+        <img src="@/assets/images/icon/close.svg">
+      </div>
+      <div class="fullscreen-header">
+        <div class="border" :style="{ 'background-image': 'url(' + `${require('@/assets/images/icon/menu-active-gold.png')}` + ')'}"></div>
+        <div class="image">
+          <div class="photo" :style="{ 'background-image': `url(${agenda.session[nowFocusSessionIndex].image})` }"></div>
+          <h1><span>{{ agenda.session[nowFocusSessionIndex].speaker }}</span></h1>
+        </div>
+      </div>
+      <div class="fullscreen-content">
+        <h1><span>{{ agenda.session[nowFocusSessionIndex].name }}</span></h1>
+        <p><span>{{ agenda.session[nowFocusSessionIndex].summary }}</span></p>
+        <p><span class="hodler"></span><a class="button" :href="agenda.session[nowFocusSessionIndex].link" target="_blank">查看簡報</a></p>
+      </div>
+    </div>
     <Footer />
   </div>
 </template>
@@ -42,6 +59,7 @@ import layout from '@/components/layout'
 export default {
   data () {
     return {
+      nowFocusSessionIndex: '',
       agenda: {
         time: [
           '10:00',
@@ -133,7 +151,7 @@ export default {
         session: [
           {
             name: '簡介 CVE-2017-9993 與 BambooFox 讀書會',
-            summery: '簡介 CVE-2017-9993 如何繞過防禦，利用 ssrf 造成任意讀取的資安漏洞',
+            summary: '簡介 CVE-2017-9993 如何繞過防禦，利用 ssrf 造成任意讀取的資安漏洞',
             link: 'https://hackmd.io/p/H1B9zOg_W#/',
             image: 'https://i.imgur.com/P5W0wXe.png',
             speaker: 'CALee',
@@ -141,47 +159,83 @@ export default {
             id: '1A'
           },
           {
-            name: 'Session 2A',
+            name: '那些年我們遇過的資安事件-淺談網路安全情資共享機制及實作',
+            summary: '淺談網路安全情資共享機制及實作',
+            link: 'https://hackmd.io/p/H1B9zOg_W#/',
+            image: 'https://i.imgur.com/P5W0wXe.png',
+            speaker: 'HTz',
             time: '50',
             id: '2A'
           },
           {
-            name: 'Session 3A',
+            name: '那些年失守的類比家園-事件調查及資安防護的經驗分享',
+            summary: '藉由自身資安事件調查的經驗分享，並搭配自行整理的各種攻擊手法，整理並分享發生資安事件的時候所需要思維',
+            link: 'https://hackmd.io/p/H1B9zOg_W#/',
+            image: 'https://i.imgur.com/P5W0wXe.png',
+            speaker: 'Keyboard007',
             time: '50',
             id: '3A'
           },
           {
-            name: 'Session 4A',
+            name: '簡介 CVE-2017-9993 與 BambooFox 讀書會',
+            summary: '簡介 CVE-2017-9993 如何繞過防禦，利用 ssrf 造成任意讀取的資安漏洞',
+            link: 'https://hackmd.io/p/H1B9zOg_W#/',
+            image: 'https://i.imgur.com/P5W0wXe.png',
+            speaker: 'CALee',
             time: '50',
             id: '4A'
           },
           {
-            name: 'Session 5A',
+            name: '簡介 CVE-2017-9993 與 BambooFox 讀書會',
+            summary: '簡介 CVE-2017-9993 如何繞過防禦，利用 ssrf 造成任意讀取的資安漏洞',
+            link: 'https://hackmd.io/p/H1B9zOg_W#/',
+            image: 'https://i.imgur.com/P5W0wXe.png',
+            speaker: 'CALee',
             time: '50',
             id: '5A'
           },
           {
-            name: 'Session 1B',
+            name: '第一次吃洋蔥就上手',
+            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
+            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
+            image: 'https://i.imgur.com/gYdKhJq.jpg',
+            speaker: 'Jie',
             time: '50',
             id: '1B'
           },
           {
-            name: 'Session 2B',
+            name: '第一次吃洋蔥就上手',
+            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
+            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
+            image: 'https://i.imgur.com/gYdKhJq.jpg',
+            speaker: 'Jie',
             time: '50',
             id: '2B'
           },
           {
-            name: 'Session 3B',
+            name: '第一次吃洋蔥就上手',
+            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
+            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
+            image: 'https://i.imgur.com/gYdKhJq.jpg',
+            speaker: 'Jie',
             time: '50',
             id: '3B'
           },
           {
-            name: 'Session 4B',
+            name: '第一次吃洋蔥就上手',
+            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
+            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
+            image: 'https://i.imgur.com/gYdKhJq.jpg',
+            speaker: 'Jie',
             time: '50',
             id: '4B'
           },
           {
-            name: 'Session 5B',
+            name: '第一次吃洋蔥就上手',
+            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
+            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
+            image: 'https://i.imgur.com/gYdKhJq.jpg',
+            speaker: 'Jie',
             time: '50',
             id: '5B'
           },

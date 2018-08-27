@@ -303,6 +303,7 @@
       flex-direction: column;
       font-size: 12pt;
       position: relative;
+      cursor: pointer;
       @media screen and (max-width: 800px) {
         flex-direction: row;
         justify-content: space-between;
@@ -339,8 +340,8 @@
         }
       }
       hr {
-        width: 1rem;
-        color: $dark;
+        width: 2rem;
+        border: 1px solid $dark;
         @media screen and (max-width: 800px) {
           display: none;
         }

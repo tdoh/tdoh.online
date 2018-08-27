@@ -3,7 +3,6 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  // filter: drop-shadow(0 0 3rem rgba($gold, .5));
   @media screen and (max-width: 1023px) {
     background-image: url('./assets/images/paper-mobile.png');
     background-size: cover;
@@ -38,14 +37,183 @@
   color: $white;
 }
 
-.slide-left-enter, .slide-right-leave-active {
+.slide-left-enter,
+.slide-right-leave-active {
   position: absolute;
   opacity: 0;
   transform: translateX(50%);
 }
 
-.slide-left-leave-active, .slide-right-enter{
+.slide-left-leave-active,
+.slide-right-enter {
   position: absolute;
   opacity: 0;
   transform: translateX(-50%);
+}
+
+.fullscreen {
+  &-container {
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: calc(100% - 40rem);
+    height: calc(100vh - 30rem);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 15rem 20rem;
+    @media screen and (max-width: 1440px) {
+      width: calc(100% - 10rem);
+      margin: 15rem 5rem;
+    }
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 5rem);
+      height: calc(100vh - 5rem);
+      margin: 2.5rem;
+      flex-direction: column;
+    }
+  }
+  &-close {
+    overflow: hidden;
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    right: -2rem;
+    top: -2rem;
+    img {
+      height: 2rem;
+      width: 2rem;
+      transform: translateY(-2rem);
+      filter: drop-shadow(0 2rem 0 $gold);
+    }
+    &:before {
+      z-index: -2;
+      content: '';
+      position: fixed;
+      background: linear-gradient(rgba($black, .5), $black 30%, $black 70%, rgba($black, .5));
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+    }
+  }
+  &-header {
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      margin-top: 2rem;
+    }
+    .border {
+      position: absolute;
+      z-index: -1;
+      top: -.3rem;
+      left: -25px;
+      width: 250px;
+      height: 250px;
+      background-position: center;
+      background-size: cover;
+      @media screen and (max-width: 768px) {
+        left: calc(50% - 125px);
+        top: calc(2rem + 75px);
+      }
+    }
+    .image {
+      z-index: 1;
+      width: 200px;
+      height: 250px;
+      position: relative;
+      border-radius: 1.2rem 1.2rem 50% 50%;
+      overflow: hidden;
+      padding: 4px;
+      filter: drop-shadow(0 0 10px $gold);
+      .photo {
+        background-size: cover;
+        background-position: center;
+        width: 200px;
+        height: 250px;
+        border-radius: 1rem 1rem 50% 50%;
+      }
+      h1 {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        bottom: 1rem;
+        background: -webkit-linear-gradient($dark 50%, $gold-shadow, $dark);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 14pt;
+        line-height: 24pt;
+        span {
+          z-index: 10;
+        }
+      }
+      &:before {
+        border-radius: 1rem 1rem 50% 50%;
+        z-index: -1;
+        content: '';
+        top: -4px;
+        bottom: -4px;
+        left: -4px;
+        right: -4px;
+        position: absolute;
+        box-sizing: border-box;
+        background: linear-gradient(to bottom, $gold, $gold-shadow 30%, $gold-shadow 70%, $gold);
+      }
+      &:after {
+        z-index: 0;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        content: '';
+        height: 3rem;
+        width: 100%;
+        background: linear-gradient(to bottom, $gold-shadow, $gold);
+      }
+    }
+  }
+  &-content {
+    margin: auto;
+    margin-left: 2rem;
+    color: $white;
+    @media screen and (max-width: 768px) {
+     margin: auto .5rem;
+     text-align: center;
+     h1 {
+       margin-top: 1rem;
+       font-size: 18pt;
+     }
+    }
+    h1 {
+      span {
+        font-weight: 800;
+      }
+    }
+    p {
+      font-size: 14pt;
+      margin: 1rem 0;
+      line-height: 1.2;
+    }
+    .button {
+      margin: 0 1rem;
+      background: none;
+      &:before,
+      &:after {
+        content: '';
+        border: 1px solid $gold;
+        background: linear-gradient(to right bottom, $gold, rgba($gold, .2));
+        border-image: linear-gradient(to right bottom, $gold, rgba($gold, .2)) 1;
+        position: absolute;
+        height: 8pt;
+        width: 8pt;
+      }
+      &:before {
+        transform: translateX(-4rem) rotate(-45deg);
+      }
+      &:after {
+        transform: translateX(4rem) rotate(135deg);
+      }
+    }
+  }
 }
