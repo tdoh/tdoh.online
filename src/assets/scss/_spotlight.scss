@@ -7,7 +7,7 @@
   margin-top: 150px;
   @media screen and (max-width: 1024px) {
     max-width: 100%;
-    margin: 1rem;
+    margin: 1rem .5rem;
     margin-top: 60px;
   }
   @media screen and (max-width: 1440px) {
@@ -73,6 +73,9 @@
         font-size: 14pt;
         line-height: 1.6;
         margin: 1rem 0;
+        @media screen and (max-width: 768px) {
+          font-size: 13pt;
+        }
       }
       &.center {
         text-align: center;
@@ -90,6 +93,9 @@
         img {
           height: 250px;
           margin: auto;
+          @media screen and (max-width: 768px) {
+            height: 200px;
+          }
         }
         p {
           background: -webkit-linear-gradient(rgba($gold, .1), $gold 85%, rgba($gold, .1));
@@ -99,6 +105,10 @@
           font-size: 16pt;
           text-align: center;
           text-indent: 0;
+          @media screen and (max-width: 768px) {
+            background: -webkit-linear-gradient(rgba($gold, .5), $gold 75%, rgba($gold, .1));
+            -webkit-background-clip: text;
+          }
         }
       }
     }
