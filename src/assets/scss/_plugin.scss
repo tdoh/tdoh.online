@@ -75,6 +75,12 @@
       margin: 2.5rem;
       flex-direction: column;
     }
+    @media screen and (max-width: 414px) {
+      width: calc(100% - 1rem);
+      height: calc(100vh - 1rem);
+      margin: 0.5rem;
+      flex-direction: column;
+    }
   }
   &-close {
     overflow: hidden;
@@ -83,6 +89,10 @@
     width: 2rem;
     right: -2rem;
     top: -2rem;
+    @media screen and (max-width: 768px) {
+      top: .5rem;
+      right: .5rem;
+    }
     img {
       height: 2rem;
       width: 2rem;
@@ -102,13 +112,14 @@
   }
   &-header {
     text-align: center;
+    position: relative;
     @media screen and (max-width: 768px) {
       margin-top: 2rem;
     }
     .border {
       position: absolute;
       z-index: -1;
-      top: -.3rem;
+      top: -30%;
       left: -25px;
       width: 250px;
       height: 250px;
@@ -116,7 +127,11 @@
       background-size: cover;
       @media screen and (max-width: 768px) {
         left: calc(50% - 125px);
-        top: calc(2rem + 75px);
+      }
+      @media screen and (max-width: 414px) {
+        width: 200px;
+        height: 200px;
+        left: calc(50% - 100px);
       }
     }
     .image {
@@ -128,12 +143,20 @@
       overflow: hidden;
       padding: 4px;
       filter: drop-shadow(0 0 10px $gold);
+      @media screen and (max-width: 414px) {
+        width: 150px;
+        height: 180px;
+      }
       .photo {
         background-size: cover;
         background-position: center;
         width: 200px;
         height: 250px;
         border-radius: 1rem 1rem 50% 50%;
+        @media screen and (max-width: 414px) {
+          width: 150px;
+          height: 180px;
+        }
       }
       h1 {
         z-index: 1;
@@ -178,7 +201,7 @@
     margin-left: 2rem;
     color: $white;
     @media screen and (max-width: 768px) {
-     margin: auto .5rem;
+     margin: 2rem .5rem;
      text-align: center;
      h1 {
        margin-top: 1rem;

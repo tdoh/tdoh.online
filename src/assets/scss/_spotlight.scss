@@ -181,6 +181,9 @@
     box-sizing: border-box;
     overflow: hidden;
     grid-gap: 2px;
+    @media screen and (max-width: 1024px) {
+      margin: auto;
+    }
     @media screen and (max-width: 800px) {
       width: 100%;
       overflow: visible;
