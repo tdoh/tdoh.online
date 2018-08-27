@@ -218,8 +218,14 @@
       margin: 1rem 0;
       line-height: 1.2;
     }
-    .button {
-      margin: 0 1rem;
+    a {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: $white;
+      margin: 0 2rem;
       background: none;
       &:before,
       &:after {

@@ -47,7 +47,7 @@
       <div class="fullscreen-content">
         <h1><span>{{ agenda.session[nowFocusSessionIndex].name }}</span></h1>
         <p><span>{{ agenda.session[nowFocusSessionIndex].summary }}</span></p>
-        <p><span class="hodler"></span><a class="button" :href="agenda.session[nowFocusSessionIndex].link" target="_blank">查看簡報</a></p>
+        <p><a :href="agenda.session[nowFocusSessionIndex].link" target="_blank"><span>查看簡報</span></a></p>
       </div>
     </div>
     <Footer />
