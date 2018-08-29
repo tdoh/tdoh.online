@@ -31,23 +31,25 @@
         <div class="event blank"></div>
       </div>
     </div>
-    <div class="fullscreen-container" v-if="nowFocusSessionIndex !== ''" :style="{ 'top': `${nowScroll()}px` }">
-      <div class="fullscreen-close" @click="nowFocusSessionIndex = ''">
-        <img src="@/assets/images/icon/close.svg">
-      </div>
-      <div class="fullscreen-header">
-        <div class="border" :style="{ 'background-image': 'url(' + `${require('@/assets/images/icon/menu-active-gold.png')}` + ')'}"></div>
-        <div class="image">
-          <div class="photo" :style="{ 'background-image': `url(${agenda.session[nowFocusSessionIndex].image})` }"></div>
-          <h1><span>{{ agenda.session[nowFocusSessionIndex].speaker }}</span></h1>
+    <div class="fullscreen-container" v-if="nowFocusSessionIndex !== ''">
+      <div class="container">
+        <div class="fullscreen-close" @click="nowFocusSessionIndex = ''">
+          <img src="@/assets/images/icon/close.svg">
         </div>
-      </div>
-      <div class="fullscreen-content">
-        <h1><span>{{ agenda.session[nowFocusSessionIndex].name }}</span></h1>
-        <p v-for="(paragraph, i) in agenda.session[nowFocusSessionIndex].summary" :key="i">
-          <span>{{ paragraph }}</span>
-        </p>
-        <p v-if="agenda.session[nowFocusSessionIndex].link"><a :href="agenda.session[nowFocusSessionIndex].link" target="_blank"><span>查看簡報</span></a></p>
+        <div class="fullscreen-header">
+          <div class="border" :style="{ 'background-image': 'url(' + `${require('@/assets/images/icon/menu-active-gold.png')}` + ')'}"></div>
+          <div class="image">
+            <div class="photo" :style="{ 'background-image': `url(${agenda.session[nowFocusSessionIndex].image})` }"></div>
+            <h1><span>{{ agenda.session[nowFocusSessionIndex].speaker }}</span></h1>
+          </div>
+        </div>
+        <div class="fullscreen-content">
+          <h1><span>{{ agenda.session[nowFocusSessionIndex].name }}</span></h1>
+          <p v-for="(paragraph, i) in agenda.session[nowFocusSessionIndex].summary" :key="i">
+            <span>{{ paragraph }}</span>
+          </p>
+          <p v-if="agenda.session[nowFocusSessionIndex].link"><a :href="agenda.session[nowFocusSessionIndex].link" target="_blank"><span>查看簡報</span></a></p>
+        </div>
       </div>
     </div>
     <Footer />
