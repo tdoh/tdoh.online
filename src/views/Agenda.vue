@@ -2,10 +2,8 @@
   <div>
     <div class="spotlight">
       <div class="spotlight-box spotlight-table">
-        <div class="time-container">
-          <div class="event time" v-for="time in agenda.time" :key="`time-${time}`">
-            <p>{{ time }}</p>
-          </div>
+        <div class="event desktopTime" v-for="(time, i) in agenda.time" :key="`time-${time}`" :style="{ 'grid-area': `time-${i}` }">
+          <p>{{ time }}</p>
         </div>
         <div class="event main" v-for="main in agenda.main" :key="`main-${main.id}`" :style="{ 'grid-area': `${main.id}` }">
           <p>{{ main.name }}</p>
@@ -33,7 +31,7 @@
         <div class="event blank"></div>
       </div>
     </div>
-    <div class="fullscreen-container" v-if="nowFocusSessionIndex !== ''">
+    <div class="fullscreen-container" v-if="nowFocusSessionIndex !== ''" :style="{ 'top': `${nowScroll()}px` }">
       <div class="fullscreen-close" @click="nowFocusSessionIndex = ''">
         <img src="@/assets/images/icon/close.svg">
       </div>
@@ -46,8 +44,10 @@
       </div>
       <div class="fullscreen-content">
         <h1><span>{{ agenda.session[nowFocusSessionIndex].name }}</span></h1>
-        <p><span>{{ agenda.session[nowFocusSessionIndex].summary }}</span></p>
-        <p><a :href="agenda.session[nowFocusSessionIndex].link" target="_blank"><span>查看簡報</span></a></p>
+        <p v-for="(paragraph, i) in agenda.session[nowFocusSessionIndex].summary" :key="i">
+          <span>{{ paragraph }}</span>
+        </p>
+        <p v-if="agenda.session[nowFocusSessionIndex].link"><a :href="agenda.session[nowFocusSessionIndex].link" target="_blank"><span>查看簡報</span></a></p>
       </div>
     </div>
     <Footer />
@@ -150,147 +150,182 @@ export default {
         ],
         session: [
           {
-            name: '簡介 CVE-2017-9993 與 BambooFox 讀書會',
-            summary: '簡介 CVE-2017-9993 如何繞過防禦，利用 ssrf 造成任意讀取的資安漏洞',
-            link: 'https://hackmd.io/p/H1B9zOg_W#/',
-            image: 'https://i.imgur.com/P5W0wXe.png',
-            speaker: 'CALee',
+            name: 'No outside contact? How a security researcher escape from an isolated country?',
+            summary: ['A young North Korean soldier defected to South Korea across the demilitarized zone (DMZ)"; And "Otto Warmbier\'s death after visiting North Korea" raise the people\'s interesting of this mystery country.', 'As a security researcher, any technology, devices, human being and social engineering must be attractive when visiting somewhere.  This is not typical malware analysis and hacking course.', 'It might not be a novel things but it must be an excited experience to share with researchers.  It is really a physical access to the isolated system - North Korea.', 'In this 25 minutes briefing, speaker will bring you into the so-called isolated area - no phone, no internet.', 'During the trip, you will know the wonderful and extremely interesting level of technology either the individual or the community'],
+            link: '',
+            image: '',
+            speaker: 'Captain',
             time: '50',
             id: '1A'
           },
           {
-            name: '那些年我們遇過的資安事件-淺談網路安全情資共享機制及實作',
-            summary: '淺談網路安全情資共享機制及實作',
+            name: '網路戰爭的演進與變化',
+            summary: ['自2016年蔡總統上任以來，多次提到「資安即國安」的願景，並在我國國防自主戰略中也提及資訊安全為我國重要國防產業之一。', '也針對資訊安全法規進行了修訂以及對資安組織的調整，甚至在2017年組建資通電軍，將我國資安戰略開始走向攻防兼備之布局。  但近年資安威脅並未隨我國對資安的重視而下降，資安事件反而隨著新科技的進步與應用、物聯網環境與相關法規的不成熟、數位金融科技的應用與虛擬貨幣所搭建出來的新環境，讓網路犯罪之黑色產業鏈更加蓬勃。', '無論是勒索軟體對個人以及企業用戶所造成的威脅，還是黑帽駭客集團直接對金融體系的勒索或入侵盜領款項，都對我國資安造成相當大的威脅。', '此外，自中共進行軍改以來，由統整過後的解放軍戰略支援部隊更是多次對我國發動有系統與組織的網路攻擊，攻擊對象已由政府機關，轉向民間智庫、電信業者、委外廠商等。', '除以技術為根據的傳統數位入侵之外，有心人士也配合傳媒以及社交平台與通訊軟體進行數位輿論戰，讓原本就已超越地緣限制的資安攻擊更加多元難防，從虛擬空間走向實體，更從實體破壞步向人類的認知與心理，這也代表資安戰略亦須隨其變化與時俱進方能有效捍衛數位國土安全。', '本研究嘗試從威脅導向與目標打擊的角度從察打一體的觀點檢視過往的資安事件與資訊站的變化，以期能精進我國資安戰略，貫徹「資安即國安」之目標。'],
             link: 'https://hackmd.io/p/H1B9zOg_W#/',
-            image: 'https://i.imgur.com/P5W0wXe.png',
-            speaker: 'HTz',
+            image: '',
+            speaker: '林穎佑',
             time: '50',
             id: '2A'
           },
           {
-            name: '那些年失守的類比家園-事件調查及資安防護的經驗分享',
-            summary: '藉由自身資安事件調查的經驗分享，並搭配自行整理的各種攻擊手法，整理並分享發生資安事件的時候所需要思維',
+            name: 'Employing ISO 27001 and GDPR - A Practical Way for Information Security and Data Privacy',
+            summary: ['According to the International Data Corporation (IDC) Worldwide Semi-annual Security Spending Guide in 2017, there is a forecast on worldwide spending on security-related products, and services to reach US $119.9 billion in 2021.', 'Under the enforcement of the GDPR and the well-established ISO/IEC 27001 standard, the fear of data breaches and regulatory compliance will continue to drive security investments across all industries.', 'That’s why the exist of this talk: How to employ ISO/IEC 27001 standard and GDPR compliance in a modern way regarding information security and data privacy for businesses.', 'This talk will be divided into 6 parts respectively as followings:', '(i) The Trends of todays’ cyber world', '(ii) The ISO/IEC 27001:2013 standard', '(iii) The GDPR compliance', '(iv) The relationship between ISO/IEC 27001 and GDPR', '(v) How to employ ISO/IEC 27001 standard and GDPR into pen testing / security audit', '(vi) Real case study in finance sector.', 'After the presentation, Audience should be equipped the essentials of the ISO 27001 standard, GDPR compliance and their linkages.', 'Some real-world case studies in finance sector will be brought to discuss, as for practice, audience will have a chance to brainstorm and discuss what would be happened if these cases were held in EU and regulated by GDPR.', 'Finally, having practical knowledge on how to apply both ISO 27001 standard and GDPR compliance into a real-world scenario via this interactive section.'],
             link: 'https://hackmd.io/p/H1B9zOg_W#/',
-            image: 'https://i.imgur.com/P5W0wXe.png',
-            speaker: 'Keyboard007',
+            image: '',
+            speaker: 'Forster Chiu',
             time: '50',
             id: '3A'
           },
           {
-            name: '簡介 CVE-2017-9993 與 BambooFox 讀書會',
-            summary: '簡介 CVE-2017-9993 如何繞過防禦，利用 ssrf 造成任意讀取的資安漏洞',
+            name: '不可輕忽的IoT殭屍大軍 - 攻擊戰略與未來趨勢分析',
+            summary: ['IoT攻擊已成為嚴重的資訊安全議題之一，講者將透過長期的IoT攻擊研究與攻擊資料的收集，帶領聽眾深入了解IoT攻擊戰略。', '演講將分為三大部分：', '(1) 說明目前IoT殭屍大軍的協同合作攻擊戰略', '(2) 介紹與展示如何利用新型誘捕系統來收集IoT攻擊', '(3) 由IoT攻擊資料的收集與分析，來預測未來的攻擊發展手法。'],
             link: 'https://hackmd.io/p/H1B9zOg_W#/',
-            image: 'https://i.imgur.com/P5W0wXe.png',
-            speaker: 'CALee',
+            image: '',
+            speaker: '鄭毓芹',
             time: '50',
             id: '4A'
           },
           {
-            name: '簡介 CVE-2017-9993 與 BambooFox 讀書會',
-            summary: '簡介 CVE-2017-9993 如何繞過防禦，利用 ssrf 造成任意讀取的資安漏洞',
+            name: '從一個脆弱點到串起整個攻擊鏈',
+            summary: ['當業務邏輯擴增、企業架構逐漸複雜時，Bug 或是能解決問題的替代方案便開始增加，這些問題單獨看來可能不起眼或根本無害，但許多微小問題串在一起時，便可能產生嚴重的風險！', '本議程將以 Java 為主軸，分析一個筆者所回報的 0day 以及一個在 Bug Bounty 中因多層次架構所導致遠端代碼執行的案例！'],
             link: 'https://hackmd.io/p/H1B9zOg_W#/',
-            image: 'https://i.imgur.com/P5W0wXe.png',
-            speaker: 'CALee',
+            image: '',
+            speaker: 'Orange Tsai',
             time: '50',
             id: '5A'
           },
           {
-            name: '第一次吃洋蔥就上手',
-            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
-            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
-            image: 'https://i.imgur.com/gYdKhJq.jpg',
-            speaker: 'Jie',
+            name: '手機可以埋藏秘密，但是 App 不行 - 淺談 App 安全檢測與實作',
+            summary: ['隨著智慧型手機普及，每天有大量APP被下載至行動裝置中，手機APP不僅僅為人們帶來便利性，也成為駭客攻擊的新興手法，由於開發人員在開發程式時，多著重在APP 的功能、效能等議題，較少注意安全上的問題，也因為效能與使用便利性，人們不知不覺就把自己的秘密都放到手機上。'],
+            link: '',
+            image: '',
+            speaker: 'HTz',
             time: '50',
             id: '1B'
           },
           {
-            name: '第一次吃洋蔥就上手',
-            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
-            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
-            image: 'https://i.imgur.com/gYdKhJq.jpg',
-            speaker: 'Jie',
+            name: 'The thing behind the OP-TEE',
+            summary: ['OPTEE 是一套執行於 ARM Cortex-A TrustZone 環境的 kernel，作為一個執行於安全環境的 kernel 不會被使用者直接看見讓它有種神祕感！', '本議程會介紹這個 kernel 如何運作跟如何運用在我們平常生活中的產品！'],
+            link: '',
+            image: '',
+            speaker: 'lalaland',
             time: '50',
             id: '2B'
           },
           {
-            name: '第一次吃洋蔥就上手',
-            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
-            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
-            image: 'https://i.imgur.com/gYdKhJq.jpg',
-            speaker: 'Jie',
+            name: 'CEH 快速入門',
+            summary: ['感謝 TDOH 社群的各位前輩，去年分享相關 CEH 的相關內容，虎虎後續取得證照囉～回來跟各位快速分享證照的內容，也希望對滲透測試的有興趣的各位小伙伴兒們順利考取：)'],
+            link: '',
+            image: '',
+            speaker: '虎虎',
             time: '50',
             id: '3B'
           },
           {
-            name: '第一次吃洋蔥就上手',
-            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
-            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
-            image: 'https://i.imgur.com/gYdKhJq.jpg',
+            name: 'How to become a wireless hunter',
+            summary: ['每個系統如果想要互相溝通，都一定要先約定好一種溝通方式。這一二十年來，人們的生活越來越離不開這些裝置，甚至生活根本是依賴在這些裝置之上的。因為方便的關係，這些裝置中有一大部分是使用無線通信協定，例如 Bluetooth / Wifi 等等。', '這次分享會著重在於帶給入門 Wireless Hacking 新手一些可以參考的資訊，例如設備挑選、學習資訊參考來源、常見攻擊模式與目前常見協定原理 / 協定漏洞等。'],
+            link: '',
+            image: '',
             speaker: 'Jie',
             time: '50',
             id: '4B'
           },
           {
-            name: '第一次吃洋蔥就上手',
-            summary: '這個世界上，有陽光的地方就會有陰暗處，白天的結束就代表著夜晚的到來；網際網路也是一樣。據不具名機構調查，世界上大約有 30% 的網站可以從 Google 查詢的到，剩下的70%則隱身於陰暗處，許多不為人知的交易及服務正在這我們所不知道的世界裡如火如荼地進行著．希望藉由這 session 帶領大家一窺暗網的面貌，也討論其背後相關技術。',
-            link: 'https://www.slideshare.net/JieLiau/the-tor-network',
-            image: 'https://i.imgur.com/gYdKhJq.jpg',
-            speaker: 'Jie',
+            name: 'Hack the naive hacker: Ethereum smart contract honeypots',
+            summary: ['Ethereum 利用智能合約為鍊圈帶來圖靈完整的可編程區塊鍊生態系，在 Solidity 漸漸成為合約撰寫主流之時，一批善於利用合約與程式碼漏洞的駭客伺機而動，掀起鍊圈諸多資洩與價值流失等資安悲劇，在黑與白的攻防鬥爭之外，一群灰帽駭客開始設下陷阱，製造合約蜜罐，利用顯而易見的假漏洞反駭駭客。', '這堂演講為大家解析一些著名與創新的蜜罐手法。'],
+            link: '',
+            image: '',
+            speaker: 'Jeff Hu',
             time: '50',
             id: '5B'
           },
           {
-            name: 'Session 1C',
+            name: 'Sponsor Talk',
+            summary: [],
+            link: '',
+            image: '',
+            speaker: '',
             time: '20',
             id: '1C'
           },
           {
-            name: 'Session 2C',
+            name: 'Sponsor Talk',
+            summary: [],
+            link: '',
+            image: '',
+            speaker: '',
             time: '20',
             id: '2C'
           },
           {
-            name: 'Session 3C',
+            name: '無形無蹤，好似我本人從未造訪過 - 那些簡單好上手的 Jump Site 實作',
+            summary: ['網路世紀末日，有些人掌握天梯、妄想晉升為神。你是一個守序善良魔導師，你操控著一批死靈與殭屍。冀望拯救世界？有何不可。在眾神知道你的真身之前，善用你的每一個化身，將神揣下，重新做人。', '本議程將以 SSH Tunnel、VPN Gate 與 Shadowsocks 技術為例搭建 Jump Site；並枚舉數個情境下的應用方式。', '參與本議程需自備電腦，推薦使用 Manajro Linux (Arch Linux)。並建議自備跳板機，小至 Raspberry Pi，大至 VPS，或任何可供建立 SSH 連線的設備。', '參與本議程前推薦觀賞電影《移動世界》或其原作小說《Jumper》。'],
+            link: '',
+            image: '',
+            speaker: '小平',
             time: '20',
             id: '3C'
           },
           {
-            name: 'Session 4C',
+            name: '知識就是力量！十年安全技術知識庫建置經驗分享',
+            summary: ['年輕時一直有收集技術文件的習慣，大約從 10 年前左右工作開始，發現文件累積到一個數量級之後，對於技術知識的組織和歸納，產生了許多問題。', '像是，如何快速找到想要的資料？如何挖掘冷門但重要的技術方法？', '近 10 年經歷多次的知識管理方法升級，累積了將近 14 萬筆技術文件（對，就是只有 PDF 和 PowerPoint 文件），超過 160 GB，而且至少都經過一次的粗分類，完全沒分類過的就不算在內了。', '大巧不公，用了簡單的方法。拋個磚。'],
+            link: '',
+            image: '',
+            speaker: 'Kuon',
             time: '20',
             id: '4C'
           },
           {
-            name: 'Session 5C',
+            name: '淺談 ATT&CK',
+            summary: ['在這個資安產品百家爭鳴的時代，此分享會先帶大家全盤認識何謂 ATT&CK：從一個較為客觀的架構評估在防禦上是否有不足'],
+            link: '',
+            image: '',
+            speaker: 'JohnThunder',
             time: '20',
             id: '5C'
           },
           {
-            name: 'Session 6C',
+            name: 'Sponsor Talk',
+            summary: [],
+            link: '',
+            image: '',
+            speaker: '',
             time: '20',
             id: '6C'
           },
           {
-            name: 'Session 7C',
+            name: '駭客眼中的身分證',
+            summary: ['原來，台灣的身分證編號有這麼有趣的潛規則', '台灣普遍的高中職，甚至部份大學，可能只要讓駭客有了你的學號就可以獲取你的住址？怎麼做到的？', '課堂上，老師只教學生如何驗證身分證是否正確，卻沒有告訴你如何高效率的暴力破解身分證。', '知道編碼歷史後，你可以更輕鬆的搭配網路情蒐，將對方身分證推算出來！進而還可以得到對方的學歷、課表、電話、住址甚至是身高、體重"'],
+            link: '',
+            image: '',
+            speaker: 'Mico',
             time: '20',
             id: '7C'
           },
           {
-            name: 'Session 8C',
+            name: 'Mysterious Talk',
+            summary: [],
+            link: '',
+            image: '',
+            speaker: '',
             time: '20',
             id: '8C'
           },
           {
-            name: 'Session 9C',
-            time: '80',
-            id: '9C'
-          },
-          {
             name: 'Session 1D',
+            summary: [],
+            link: '',
+            image: '',
+            speaker: '',
             time: '170',
             id: '1D'
           },
           {
-            name: 'Session 2D',
+            name: 'Playing Malware Injection with Exploit thoughts',
+            summary: ['以往駭客希望繞過防毒軟體或者系統防護產品的白名單保護時，通常會採用惡意程式碼注入手段，將自身具有惡意的程式碼注入在白名單中的系統服務中執行起來，避免遭受防毒軟體或者防護產品白名單防護查殺。', '當駭客做惡意程式碼注入時，通常會採用 RunPE、AtomBombing、跨行程創建執行緒等等手段來做到程式碼注入、駭客可以偽造自己的執行程式為任何系統關鍵服務；不過在市面上防毒廠商日趨進步下，這些敏感手段已經逐漸會被主動防禦查殺，不過——萬一作業系統關鍵服務本身早已千瘡百孔呢？駭客手段已經逐漸高明、動刀在記憶體之戰上。', '本議程將簡單帶過 2013 年後出現的新型態記憶體層級注入手法—— PowerLoadEx，並基於此概念上披露三種未曾出現於網路上的全新注入手段，善用了 Windows 本身關鍵記憶體缺陷弱點，藉此來注入惡意行為至系統關鍵服務。內容將涵蓋 Windows 系統程式逆向分析、記憶體弱點分析、如何實作與利用，議程末將會釋出相關的 PoC。'],
+            link: '',
+            image: '',
+            speaker: 'aaaddress1',
             time: '120',
             id: '2D'
           }
@@ -342,6 +377,11 @@ export default {
   },
   components: {
     ...layout
+  },
+  methods: {
+    nowScroll () {
+      return document.documentElement.scrollTop
+    }
   }
 }
 </script>
