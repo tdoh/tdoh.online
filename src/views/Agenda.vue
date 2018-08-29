@@ -380,7 +380,7 @@ export default {
   },
   methods: {
     nowScroll () {
-      return document.documentElement.scrollTop
+      return document.body.scrollTop || document.documentElement.scrollTop
     }
   }
 }

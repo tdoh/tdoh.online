@@ -108,6 +108,9 @@
       height: 100vh;
       top: 0;
       left: 0;
+      @media screen and (max-width: 768px) {
+        background: $black;
+      }
     }
   }
   &-header {
