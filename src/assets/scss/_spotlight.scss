@@ -353,6 +353,16 @@
     align-items: center;
     .member {
       margin: 1rem .5rem;
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .image {
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+      }
       p {
         margin: .25rem;
         text-align: center;
