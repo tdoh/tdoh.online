@@ -200,7 +200,7 @@ export default {
             name: '手機可以埋藏秘密，但是 App 不行 - 淺談 App 安全檢測與實作',
             summary: ['隨著智慧型手機普及，每天有大量APP被下載至行動裝置中，手機APP不僅僅為人們帶來便利性，也成為駭客攻擊的新興手法，由於開發人員在開發程式時，多著重在APP 的功能、效能等議題，較少注意安全上的問題，也因為效能與使用便利性，人們不知不覺就把自己的秘密都放到手機上。'],
             link: '',
-            image: '',
+            image: 'https://i.imgur.com/gYdKhJq.jpg',
             speaker: 'HTz',
             time: '50',
             id: '1B'
