@@ -171,17 +171,19 @@
         z-index: 1;
         position: absolute;
         width: calc(100% - 8px);
-        bottom: 1rem;
+        bottom: .75rem;
         background: -webkit-linear-gradient($gold-shadow, $gold 50%, $gold);
         -webkit-background-clip: text;
         -webkit-text-fill-color: rgba($dark, .7);
-        font-size: 14pt;
+        font-size: 15pt;
         line-height: 24pt;
-        transform: scaleX(.8);
+        transform: scale(.8, 1.25);
         @media screen and (max-width: 768px) {
+          font-size: 14;
           bottom: .5rem;
         }
         span {
+          font-weight: 800;
           z-index: 10;
         }
       }
