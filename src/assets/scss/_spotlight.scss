@@ -231,7 +231,11 @@
         "time-15  closing"
         /* ------------ */
         "time-16  ending";
-    } 
+    }
+    h1, h2, h3, a, span, p, div {
+      font-weight: 400;
+      font-family: 'Noto Sans CJK TC', sans-serif;
+    }
     .desktopTime {
       @media screen and (max-width: 900px) {
         display: none !important;
@@ -245,6 +249,37 @@
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
+      padding: .5rem;
+      p {
+        line-height: 1.2;
+        margin: .5rem 0;
+        @media screen and (max-width:900px) {
+          margin: 0;
+        }
+        &.speaker {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          @media screen and (max-width:900px) {
+            margin-top: 1rem;
+            justify-content: flex-start;
+          }
+          span {
+            padding: 0 .5rem;
+          }
+          &:before, &:after {
+            content: '';
+            height: 7pt;
+            width: 7pt;
+            background: $dark;
+            transform: rotate(45deg);
+            @media screen and (max-width:900px) {
+              background: $white;
+            }
+          }
+        }
+      }
     }
     .session, .main, .break {
       background: $gold;
