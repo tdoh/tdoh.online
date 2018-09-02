@@ -272,7 +272,7 @@
             content: '';
             height: 7pt;
             width: 7pt;
-            background: $dark;
+            background: $white;
             transform: rotate(45deg);
             @media screen and (max-width:900px) {
               background: $white;
@@ -282,11 +282,10 @@
       }
     }
     .session, .main, .break {
-      background: $gold;
-      color: $dark;
+      background: $gray;
+      color: $white;
       @media screen and (max-width: 900px) {
         background: none;
-        color: $white;
       }
     }
     .mobileTime {
