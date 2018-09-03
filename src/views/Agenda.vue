@@ -400,7 +400,7 @@ export default {
             id: '6'
           },
           {
-            name: '午餐時間',
+            name: 'Break',
             id: '7'
           },
           {
@@ -412,7 +412,7 @@ export default {
             id: '9'
           },
           {
-            name: '點心時間',
+            name: 'Break',
             id: 'a'
           }
         ]

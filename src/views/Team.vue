@@ -22,7 +22,7 @@ export default {
     return {
       teams: [
         {
-          type: '總招組',
+          type: '總召組',
           members: [
             {
               name: 'HrJ',
