@@ -64,7 +64,7 @@
           <h1><span>{{ agenda.session[nowFocusSessionIndex].speaker }}</span></h1>
           <p v-for="(paragraph, i) in agenda.session[nowFocusSessionIndex].bio" :key="`bio-${i}`">
             <span v-if="paragraph.match(/(\$html\[)+(.)+(\])/)">
-            {{ paragraph.substring(0, paragraph.match(/(\$html\[)+(.)+(\])/).index) }}
+              {{ paragraph.substring(0, paragraph.match(/(\$html\[)+(.)+(\])/).index) }}
             </span>
             <a
               v-if="paragraph.match(/(\$html\[)+(.)+(\])/)"
@@ -202,7 +202,7 @@ export default {
             name: 'Employing ISO 27001 and GDPR - A Practical Way for Information Security and Data Privacy',
             summary: ['According to the International Data Corporation (IDC) Worldwide Semi-annual Security Spending Guide in 2017, there is a forecast on worldwide spending on security-related products, and services to reach US $119.9 billion in 2021.', 'Under the enforcement of the GDPR and the well-established ISO/IEC 27001 standard, the fear of data breaches and regulatory compliance will continue to drive security investments across all industries.', 'That’s why the exist of this talk: How to employ ISO/IEC 27001 standard and GDPR compliance in a modern way regarding information security and data privacy for businesses.', 'This talk will be divided into 6 parts respectively as followings:', '(i) The Trends of todays’ cyber world', '(ii) The ISO/IEC 27001:2013 standard', '(iii) The GDPR compliance', '(iv) The relationship between ISO/IEC 27001 and GDPR', '(v) How to employ ISO/IEC 27001 standard and GDPR into pen testing / security audit', '(vi) Real case study in finance sector.', 'After the presentation, Audience should be equipped the essentials of the ISO 27001 standard, GDPR compliance and their linkages.', 'Some real-world case studies in finance sector will be brought to discuss, as for practice, audience will have a chance to brainstorm and discuss what would be happened if these cases were held in EU and regulated by GDPR.', 'Finally, having practical knowledge on how to apply both ISO 27001 standard and GDPR compliance into a real-world scenario via this interactive section.'],
             link: 'https://hackmd.io/p/H1B9zOg_W#/',
-            image: 'speaker00.jpg',
+            image: 'speaker13.jpg',
             speaker: 'Forster Chiu',
             bio: ['With a great passion in Information Security and Ethical Hacking, Forster is currently worked as a Security Consultant in Hong Kong, responsible for performing infrastructure & application vulnerability assessment and penetration tests on different platforms and technologies.', 'As the primary auditor and pen tester, Forster played as a critical role throughout the projects, where The Linux & OSS Award – Winner of Professional Security Service Solution of the Year 2018 in Hong Kong would be the greatest achievement in this year.', 'Forster is also responsible for conducting security audit service, gap analysis, and provide guidance to clients in order to conform with ISO/IEC 27001 standard and GDPR compliance. He has over 5 years solid experience in integration of different network and security solutions for small businesses to finance sector.', 'As a training consultant, Forster has also developed and delivered a wide variety of inhouse and onsite Security Awareness Training Campaigns for local organizations and MNC working environments. Starting from 2018, Forster also act as the Subject Matter Expert for EC-Council.', 'Forster has PgD in IT Forensics (University of Hong Kong), 1st class honours in BSc (Hons) Business Information Technology (Coventry University), holding CEH, ISO 27001 Lead Auditor (PECB), Lead Pen Test Professional (PECB), Certified Data Protection Officer (PECB) and Nexpose Certified Administrator credentials.'],
             time: '50',
@@ -355,11 +355,11 @@ export default {
             id: '8C'
           },
           {
-            name: 'WorkShop',
-            summary: [],
+            name: '企業防禦 DDoS 方式，和你想的一樣嗎',
+            summary: ['傳統的邊際安全性產品不僅在 DDoS 的因應對策方面顯得相對薄弱，亦因其狀態表（Stateful）結構而無法阻擋狀態耗盡攻擊，尤其現在直播和串流視訊或是遊戲，這些服務往往是 TCP 和 UDP 混合使用，在防護上將變得越來越有挑戰性。', '本工作坊將會現場架設一個測試環境, 並且將防禦設備（價值 1400 萬）真實架設在前端，讓各位有機會和企業 DDoS 解決方案現場交手一番。"'],
             link: '',
             image: 'speaker00.jpg',
-            speaker: '',
+            speaker: '博格資安讀書會',
             time: '170',
             id: '1D'
           },
