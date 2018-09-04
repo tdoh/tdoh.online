@@ -191,7 +191,7 @@ export default {
           {
             name: '網路戰爭的演進與變化',
             summary: ['自2016年蔡總統上任以來，多次提到「資安即國安」的願景，並在我國國防自主戰略中也提及資訊安全為我國重要國防產業之一。', '也針對資訊安全法規進行了修訂以及對資安組織的調整，甚至在2017年組建資通電軍，將我國資安戰略開始走向攻防兼備之布局。  但近年資安威脅並未隨我國對資安的重視而下降，資安事件反而隨著新科技的進步與應用、物聯網環境與相關法規的不成熟、數位金融科技的應用與虛擬貨幣所搭建出來的新環境，讓網路犯罪之黑色產業鏈更加蓬勃。', '無論是勒索軟體對個人以及企業用戶所造成的威脅，還是黑帽駭客集團直接對金融體系的勒索或入侵盜領款項，都對我國資安造成相當大的威脅。', '此外，自中共進行軍改以來，由統整過後的解放軍戰略支援部隊更是多次對我國發動有系統與組織的網路攻擊，攻擊對象已由政府機關，轉向民間智庫、電信業者、委外廠商等。', '除以技術為根據的傳統數位入侵之外，有心人士也配合傳媒以及社交平台與通訊軟體進行數位輿論戰，讓原本就已超越地緣限制的資安攻擊更加多元難防，從虛擬空間走向實體，更從實體破壞步向人類的認知與心理，這也代表資安戰略亦須隨其變化與時俱進方能有效捍衛數位國土安全。', '本研究嘗試從威脅導向與目標打擊的角度從察打一體的觀點檢視過往的資安事件與資訊站的變化，以期能精進我國資安戰略，貫徹「資安即國安」之目標。'],
-            link: 'https://hackmd.io/p/H1B9zOg_W#/',
+            link: '',
             image: 'speaker14.jpg',
             speaker: '林穎佑',
             bio: ['中正大學戰略暨國際事務研究所 助理教授'],
@@ -201,7 +201,7 @@ export default {
           {
             name: 'Employing ISO 27001 and GDPR - A Practical Way for Information Security and Data Privacy',
             summary: ['According to the International Data Corporation (IDC) Worldwide Semi-annual Security Spending Guide in 2017, there is a forecast on worldwide spending on security-related products, and services to reach US $119.9 billion in 2021.', 'Under the enforcement of the GDPR and the well-established ISO/IEC 27001 standard, the fear of data breaches and regulatory compliance will continue to drive security investments across all industries.', 'That’s why the exist of this talk: How to employ ISO/IEC 27001 standard and GDPR compliance in a modern way regarding information security and data privacy for businesses.', 'This talk will be divided into 6 parts respectively as followings:', '(i) The Trends of todays’ cyber world', '(ii) The ISO/IEC 27001:2013 standard', '(iii) The GDPR compliance', '(iv) The relationship between ISO/IEC 27001 and GDPR', '(v) How to employ ISO/IEC 27001 standard and GDPR into pen testing / security audit', '(vi) Real case study in finance sector.', 'After the presentation, Audience should be equipped the essentials of the ISO 27001 standard, GDPR compliance and their linkages.', 'Some real-world case studies in finance sector will be brought to discuss, as for practice, audience will have a chance to brainstorm and discuss what would be happened if these cases were held in EU and regulated by GDPR.', 'Finally, having practical knowledge on how to apply both ISO 27001 standard and GDPR compliance into a real-world scenario via this interactive section.'],
-            link: 'https://hackmd.io/p/H1B9zOg_W#/',
+            link: '',
             image: 'speaker13.jpg',
             speaker: 'Forster Chiu',
             bio: ['With a great passion in Information Security and Ethical Hacking, Forster is currently worked as a Security Consultant in Hong Kong, responsible for performing infrastructure & application vulnerability assessment and penetration tests on different platforms and technologies.', 'As the primary auditor and pen tester, Forster played as a critical role throughout the projects, where The Linux & OSS Award – Winner of Professional Security Service Solution of the Year 2018 in Hong Kong would be the greatest achievement in this year.', 'Forster is also responsible for conducting security audit service, gap analysis, and provide guidance to clients in order to conform with ISO/IEC 27001 standard and GDPR compliance. He has over 5 years solid experience in integration of different network and security solutions for small businesses to finance sector.', 'As a training consultant, Forster has also developed and delivered a wide variety of inhouse and onsite Security Awareness Training Campaigns for local organizations and MNC working environments. Starting from 2018, Forster also act as the Subject Matter Expert for EC-Council.', 'Forster has PgD in IT Forensics (University of Hong Kong), 1st class honours in BSc (Hons) Business Information Technology (Coventry University), holding CEH, ISO 27001 Lead Auditor (PECB), Lead Pen Test Professional (PECB), Certified Data Protection Officer (PECB) and Nexpose Certified Administrator credentials.'],
@@ -211,7 +211,7 @@ export default {
           {
             name: '不可輕忽的IoT殭屍大軍 - 攻擊戰略與未來趨勢分析',
             summary: ['IoT攻擊已成為嚴重的資訊安全議題之一，講者將透過長期的IoT攻擊研究與攻擊資料的收集，帶領聽眾深入了解IoT攻擊戰略。', '演講將分為三大部分：', '(1) 說明目前IoT殭屍大軍的協同合作攻擊戰略', '(2) 介紹與展示如何利用新型誘捕系統來收集IoT攻擊', '(3) 由IoT攻擊資料的收集與分析，來預測未來的攻擊發展手法。'],
-            link: 'https://hackmd.io/p/H1B9zOg_W#/',
+            link: '',
             image: 'speaker00.jpg',
             speaker: '鄭毓芹',
             bio: ['現任職於 PwC Taiwan 擔任資深資訊安全研究員，耕耘於資訊安全領域已超過13年的經驗，目前專攻誘捕系統技術，威脅情報平台，安全日誌分析，國際組織 The Honeynet Project 正式會員以及台灣分會會員之一。'],
@@ -221,7 +221,7 @@ export default {
           {
             name: '從一個脆弱點到串起整個攻擊鏈',
             summary: ['當業務邏輯擴增、企業架構逐漸複雜時，Bug 或是能解決問題的替代方案便開始增加，這些問題單獨看來可能不起眼或根本無害，但許多微小問題串在一起時，便可能產生嚴重的風險！', '本議程將以 Java 為主軸，分析一個筆者所回報的 0day 以及一個在 Bug Bounty 中因多層次架構所導致遠端代碼執行的案例！'],
-            link: 'https://hackmd.io/p/H1B9zOg_W#/',
+            link: '',
             image: 'speaker06.png',
             speaker: 'Orange Tsai',
             bio: ['Blog: $html[$a{"link":"http://blog.orange.tw","text":"http://blog.orange.tw"}]', 'Twitter: $html[$a{"link":"https://twitter.com/@orange_8361","text":"@orange_8361"}]'],
@@ -364,7 +364,7 @@ export default {
             id: '1D'
           },
           {
-            name: 'Playing Malware Injection with Exploit thoughts',
+            name: '[Workshop] Playing Malware Injection with Exploit thoughts',
             summary: ['以往駭客希望繞過防毒軟體或者系統防護產品的白名單保護時，通常會採用惡意程式碼注入手段，將自身具有惡意的程式碼注入在白名單中的系統服務中執行起來，避免遭受防毒軟體或者防護產品白名單防護查殺。', '當駭客做惡意程式碼注入時，通常會採用 RunPE、AtomBombing、跨行程創建執行緒等等手段來做到程式碼注入、駭客可以偽造自己的執行程式為任何系統關鍵服務；不過在市面上防毒廠商日趨進步下，這些敏感手段已經逐漸會被主動防禦查殺，不過——萬一作業系統關鍵服務本身早已千瘡百孔呢？駭客手段已經逐漸高明、動刀在記憶體之戰上。', '本議程將簡單帶過 2013 年後出現的新型態記憶體層級注入手法—— PowerLoadEx，並基於此概念上披露三種未曾出現於網路上的全新注入手段，善用了 Windows 本身關鍵記憶體缺陷弱點，藉此來注入惡意行為至系統關鍵服務。內容將涵蓋 Windows 系統程式逆向分析、記憶體弱點分析、如何實作與利用，議程末將會釋出相關的 PoC。'],
             link: '',
             image: 'speaker08.jpg',

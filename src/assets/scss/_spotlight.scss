@@ -69,7 +69,7 @@
       &:not(.no-indent) p {
         text-indent: 24pt;
       }
-      p {
+      p, ul {
         font-size: 14pt;
         line-height: 1.6;
         margin: 1rem 0;
@@ -77,8 +77,17 @@
           font-size: 13pt;
         }
       }
+      li {
+        list-style-type: disc;
+        margin-left: 25pt;
+        line-height: 1.4;
+      }
       &.center {
         text-align: center;
+      }
+      a {
+        color: inherit;
+        font-weight: 600;
       }
       .card {
         display: flex;
