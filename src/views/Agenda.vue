@@ -279,7 +279,7 @@ export default {
             id: '5B'
           },
           {
-            name: 'Sponsor Talk',
+            name: 'TBD',
             summary: [],
             link: '',
             image: 'speaker00.jpg',
@@ -288,7 +288,7 @@ export default {
             id: '1C'
           },
           {
-            name: 'Sponsor Talk',
+            name: 'TBD',
             summary: [],
             link: '',
             image: 'speaker00.jpg',
@@ -327,7 +327,7 @@ export default {
             id: '5C'
           },
           {
-            name: 'Sponsor Talk',
+            name: 'TBD',
             summary: [],
             link: '',
             image: 'speaker00.jpg',
