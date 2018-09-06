@@ -69,7 +69,7 @@
       &:not(.no-indent) p {
         text-indent: 24pt;
       }
-      p, ul {
+      p, ul, ol {
         font-size: 14pt;
         line-height: 1.6;
         margin: 1rem 0;
@@ -77,10 +77,19 @@
           font-size: 13pt;
         }
       }
+      ul {
+        list-style: disc;
+      }
+      ol {
+        list-style: decimal;
+      }
       li {
-        list-style-type: disc;
         margin-left: 25pt;
         line-height: 1.4;
+        img {
+          width: 100%;
+          max-width: 600px;
+        }
       }
       &.center {
         text-align: center;
