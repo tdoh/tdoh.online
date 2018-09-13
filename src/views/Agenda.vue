@@ -147,7 +147,7 @@ export default {
             id: 'start'
           },
           {
-            name: 'Lighting Talk',
+            name: 'Lightning Talk',
             id: 'lighting'
           },
           {
