@@ -8,7 +8,7 @@ const router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/2018/',
       name: 'Home',
       meta: {
         label: '首頁',
@@ -17,7 +17,7 @@ const router = new Router({
       component: views.Home
     },
     {
-      path: '/active',
+      path: '/2018/active',
       name: 'Active',
       meta: {
         label: '大會活動',
@@ -26,7 +26,7 @@ const router = new Router({
       component: views.Active
     },
     {
-      path: '/agenda',
+      path: '/2018/agenda',
       name: 'Agenda',
       meta: {
         label: '議程資訊',
@@ -35,7 +35,7 @@ const router = new Router({
       component: views.Agenda
     },
     {
-      path: '/traffic',
+      path: '/2018/traffic',
       name: 'Traffic',
       meta: {
         label: '交通資訊',
@@ -44,7 +44,7 @@ const router = new Router({
       component: views.Traffic
     },
     {
-      path: '/support',
+      path: '/2018/support',
       name: 'Support',
       meta: {
         label: '協辦單位',
@@ -53,7 +53,7 @@ const router = new Router({
       component: views.Support
     },
     {
-      path: '/team',
+      path: '/2018/team',
       name: 'Team',
       meta: {
         label: '工作團隊',
@@ -62,7 +62,7 @@ const router = new Router({
       component: views.Team
     },
     {
-      path: '/map',
+      path: '/2018/map',
       name: 'FloorMap',
       meta: {
         label: '場地平面圖',
