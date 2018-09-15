@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+  	<link rel="icon" type="image/png" href="http://tdoh-conf.online/img/logo.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TDOH Conf 2017</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106534345-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106534345-1');
+    </script>
+  </head>
+  <body class="bg2">
+    <div class="container">
+    	
+    	<div class="hm title align-middle">
+    		<h2 class="stitle btitle align-middle hm">駭客地下黑暗商城</h2>
+    	</div>
+    
+    	<div class="content content-bg">
+    		<p><i>「你好啊大哥哥，真沒想到你可以來到駭客地下城呢！不過就到這裡為止了，接下來由各式煉獄困境來對付你吧！當然 … 如果勇者你能突破困境，我也不會虧待你的，顆顆！」</i></p>
+    		<p>解出部署在場地的實體題目 / 虛擬題目獲得 Flag 上交到「暗黑商城」（位於國際會議廳的攤位）即可換取本年度駭客地下城專屬的特色紀念品！</p>
+    	</div>
+
+    	<div class="hm title align-middle">
+    		<h2 class="stitle btitle align-middle hm">Call for Cloud Security!</h2>
+    	</div>
+
+    	<div class="content content-bg">
+    		<p>Call for Cloud Security 是今年所舉辦的一個新活動，透過會眾的一個發想、一個創意、一個想法，進行組隊媒合並且希望能成長茁壯，變成一個方案或者讓他更完善。</p>
+    		<p>所有會眾皆可參加，表現優異者除了有機會獲得獎金及小禮物以外，還有可能得到出乎意料的協助喔！</p>
+    		<p>歡迎到 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBRwuQ2JBvHe9NL6WT-cDztvrfOZtcE123I1z1NghpJxFLrA/viewform?usp=sf_link">報名表單</a> 更進一步了解本活動。</p>
+    	</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $.get('navbar.html',function(data){
+        $('body').prepend(data);
+        $('.nav-item:nth-child(1)').addClass("active");
+      });
+      $.get('footer.html',function(data){$('body').append(data)});
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
