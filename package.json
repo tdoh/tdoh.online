@@ -5,6 +5,7 @@
   "author": "Aries Cs <aries0d0f@gmail.com>",
   "private": true,
   "scripts": {
+    "deploy": "git clone git@github.com:tdoh/tdoh.online dist && cd dist && git checkout gh-pages",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
