@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
 
 h1,
 h2,
@@ -19,9 +20,10 @@ span {
 }
 
 h1, h2, h3 {
-  font-weight: 600;
+  font-weight: 500;
   span {
-    font-weight: 600;
+    font-family: 'cwTeXFangSong', 'Fredericka the Great', cursive;
+    font-weight: 500;
   }
 }
 
