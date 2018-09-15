@@ -1,0 +1,3 @@
+[submodule "2016"]
+	path = 2016
+	url = git@github.com:tdoh/TDOHConf2016
