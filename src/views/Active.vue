@@ -34,7 +34,7 @@
             由於此為進階課程，工作坊將採取審核制，購買地下城的冒險證後通過大師們的審核即可參加，無另外收費。
           </p>
           <ul>
-            <li>工作坊介紹請參考<router-link to="/agenda">議程資訊</router-link></li>
+            <li>工作坊介紹請參考<router-link :to="{ name: 'Agenda' }">議程資訊</router-link></li>
             <li>欲報名工作坊請<a href="https://goo.gl/forms/mXzDDoS8cbRURpdJ3" target="_blank">點此報名</a> </li>
           </ul>
         </div>
