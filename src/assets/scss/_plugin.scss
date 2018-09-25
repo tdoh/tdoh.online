@@ -66,6 +66,7 @@
       height: calc(100vh - 10rem);
       padding: 5rem 20rem;
       overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       display: flex;
       justify-content: center;
       align-items: center;
