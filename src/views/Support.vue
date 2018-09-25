@@ -45,6 +45,9 @@ export default {
           type: '協辦單位',
           list: [
             {
+              title: '博格資安企業讀書會'
+            },
+            {
               title: '財團法人電信技術中心 (TTC)',
               image: 'TTC.jpg',
               link: 'https://www.ttc.org.tw/'
