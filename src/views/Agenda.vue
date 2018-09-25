@@ -209,12 +209,12 @@ export default {
             id: '3A'
           },
           {
-            name: 'TBD',
-            summary: [],
+            name: '區塊鏈與私鑰的重大安全威脅與解題',
+            summary: ['區塊鏈技術中數據的儲存、驗證、傳遞皆與資安息息相關，本次將分享近兩年區塊鏈與私鑰之間的重大安全漏洞問題，並分析其疏失將帶來多大的威脅與影響，同時將分享可透過哪些技術與辦法進行資料保存及保護。'],
             link: '',
-            image: '',
-            speaker: '',
-            bio: [''],
+            image: 'speaker16.jpg',
+            speaker: 'Tim Hsu',
+            bio: ['著名駭客會議 HITCON 創辦人，同時也是台灣駭客技術社群 CHROOT 創辦人。', '從學生時期專研 Linux 系統及投入開放源碼社群，進入職場後便投入資訊安全技術領域，積極參與各類社群活動。2005 年與一群熱血駭客舉辦的 HITCON 會議，至今已是世界知名會議兼社群。', '目前為台灣多家數字貨幣交易所資安顧問，包含幣託 (BitoPro) 和柯賓漢 (Cobinhood)等。'],
             time: '50',
             id: '4A'
           },
@@ -288,11 +288,12 @@ export default {
             id: '1C'
           },
           {
-            name: 'TBD',
-            summary: [],
+            name: '一頁式詐騙之資安風險面面觀',
+            summary: [''],
             link: '',
             image: 'speaker00.jpg',
-            speaker: '',
+            speaker: '羅文翎',
+            bio: ['TWCert 分析師'],
             time: '20',
             id: '2C'
           },
