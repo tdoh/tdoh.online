@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" v-show="$route.name !== 'Error'">
     <ul :class="{ 'toggle': isMobile ? mobileToggle : isToggle }">
       <div class="toggle-button" @click="mobileToggle = !mobileToggle">
         <div class="icon">
@@ -10,7 +10,7 @@
         </div>
       </div>
       <img src="@/assets/images/icon/menu-active-gold.png" alt="" :class="`at-${activePage}`">
-      <li v-for="(item, index) in menuItem" :key="index">
+      <li v-for="(item, index) in menuItem" :key="index" v-if="item.meta">
         <router-link :to="item.path">
           <span>{{ item.meta.label || item.name }}</span>
         </router-link>

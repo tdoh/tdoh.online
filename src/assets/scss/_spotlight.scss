@@ -424,4 +424,37 @@
       }
     }
   }
+  &-error {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .spotlight-box {
+      p.split {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      @media screen and (min-width: 768px) {
+        h1 {
+          span {
+            font-size: 60pt;
+          }
+          &.symbol {
+            &:before, &:after {
+              height: 40pt;
+              width: 40pt;
+            }
+          }
+        }
+        p.bigger {
+          font-size: 22pt;
+        }
+        p, a {
+          font-size: 16pt;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

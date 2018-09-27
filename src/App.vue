@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navbar :isToggle="isToggle" :isMobile="isMobile" />
-    <div class="head" v-if="$route.name !== 'Home' && isMobile">
+    <div class="head" v-if="!($route.name === 'Home' || $route.name === 'Error') && isMobile">
       <img src="@/assets/images/icon/menu-active-gold.png" />
       <h1>
         <span>{{ $route.meta.label || $route.name }}</span>

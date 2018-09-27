@@ -5,6 +5,7 @@ import Traffic from './Traffic'
 import Support from './Support.vue'
 import Team from './Team.vue'
 import FloorMap from './FloorMap.vue'
+import Error from './Error.vue'
 
 export default {
   Home,
@@ -13,5 +14,6 @@ export default {
   Traffic,
   Support,
   Team,
-  FloorMap
+  FloorMap,
+  Error
 }

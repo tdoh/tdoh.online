@@ -69,6 +69,11 @@ const router = new Router({
         index: 6
       },
       component: views.FloorMap
+    },
+    {
+      path: '/2018/*',
+      name: 'Error',
+      component: views.Error
     }
   ],
   scrollBehavior () {
