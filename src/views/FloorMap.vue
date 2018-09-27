@@ -4,13 +4,13 @@
       <div class="spotlight-box">
         <h1 class="title symbol"><span>2F 場地圖</span></h1>
         <div class="content">
-          <img src="@/assets/images/floormap/2F.png" alt="">
+          <img src="@/assets/images/floormap/2F-map.png" alt="">
         </div>
       </div>
       <div class="spotlight-box">
         <h1 class="title symbol"><span>3F 場地圖</span></h1>
         <div class="content">
-          <img src="@/assets/images/floormap/3F.png" alt="">
+          <img src="@/assets/images/floormap/3F-map.png" alt="">
         </div>
       </div>
     </div>
