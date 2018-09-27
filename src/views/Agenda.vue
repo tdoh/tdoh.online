@@ -279,11 +279,12 @@ export default {
             id: '5B'
           },
           {
-            name: 'TBD',
+            name: '淺談第四軍',
             summary: [],
             link: '',
             image: 'speaker00.jpg',
-            speaker: '',
+            speaker: '陳雪芬',
+            bio: ['網路戰聯隊'],
             time: '20',
             id: '1C'
           },
@@ -323,11 +324,12 @@ export default {
             id: '5C'
           },
           {
-            name: 'TBD',
-            summary: [],
+            name: '區塊鏈世界的吸金亂象',
+            summary: ['本議程將揭開區塊鏈【黑色產業鏈】的秘密，探討高科技犯罪者的行為，以及他們是如何利用區塊鏈洗錢、詐騙、並淺淡交易所的相關知識及搬磚對沖的簡易流程！'],
             link: '',
             image: 'speaker00.jpg',
-            speaker: '',
+            speaker: 'Singo',
+            bio: ['傳說中的黑產大亨Singo，專精於資安黑色產業鏈的研究，並在這次TDOH Conf帶你了解，你所不知道的高科技犯罪者的思維，並解析利用資訊技術洗錢及各種詐騙的手法。', '擔任職位：', '臺灣校園資訊安全推廣暨駭客培育協會 副理事長', 'NTU NSLAB - Hardware Security Team'],
             time: '20',
             id: '6C'
           },
