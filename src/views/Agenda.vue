@@ -321,7 +321,7 @@ export default {
             name: '區塊鏈世界的吸金亂象',
             summary: ['本議程將揭開區塊鏈【黑色產業鏈】的秘密，探討高科技犯罪者的行為，以及他們是如何利用區塊鏈洗錢、詐騙、並淺淡交易所的相關知識及搬磚對沖的簡易流程！'],
             link: '',
-            image: 'speaker00.jpg',
+            image: 'speaker17.jpg',
             speaker: 'Singo',
             bio: ['傳說中的黑產大亨Singo，專精於資安黑色產業鏈的研究，並在這次TDOH Conf帶你了解，你所不知道的高科技犯罪者的思維，並解析利用資訊技術洗錢及各種詐騙的手法。', '擔任職位：', '臺灣校園資訊安全推廣暨駭客培育協會 副理事長', 'NTU NSLAB - Hardware Security Team'],
             time: '20',
