@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="event break" :class="`break-${breaks.id}`" v-for="breaks in agenda.breaks" :key="`break-${breaks.id}`" :style="{ 'grid-area': `break-${breaks.id}` }">
-          <p>{{ breaks.name }}</p>
+          <p @click="$route.query[' '] ? egg() : null">{{ $route.query[' '] ? '莫風徵伴侶' : breaks.name }}</p>
         </div>
         <div class="event mobileTime" v-for="(time, i) in agenda.mobileTime" :key="`time-${i}`" :style="{ 'grid-area': `time-${i}` }">
           <p>{{ time }}</p>
@@ -416,8 +416,8 @@ export default {
     ...layout
   },
   methods: {
-    nowScroll () {
-      return document.body.scrollTop || document.documentElement.scrollTop
+    egg () {
+      window.open('https://ioan.isalways.one/', '_blank')
     }
   }
 }
