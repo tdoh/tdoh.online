@@ -64,7 +64,7 @@ export default {
             },
             {
               title: '教育部資通訊軟體創新人才推升計畫中山大學雲端運算跨校資源中心 (ITSA)',
-              image: 'ITSA.jpg',
+              image: 'ITSA-Cloud.jpg',
               link: 'https://www.itsa.org.tw/'
             },
             {
