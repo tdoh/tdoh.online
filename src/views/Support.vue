@@ -78,6 +78,11 @@ export default {
               link: 'http://leukocyte-lab.com/'
             },
             {
+              title: 'klickklack',
+              image: 'LUmnLaOQ.png',
+              link: 'https://www.kkco.com.tw'
+            },
+            {
               title: '李梅樹紀念館資訊組 (LIT)',
               image: 'LIT.jpg',
               link: 'https://open.limeishu.org.tw/'
