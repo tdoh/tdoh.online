@@ -48,7 +48,14 @@
           </div>
           <h1><span>{{ agenda.session[nowFocusSessionIndex].name }}</span></h1>
           <p v-for="(paragraph, i) in agenda.session[nowFocusSessionIndex].summary" :key="`summary-${i}`">
-            <span>{{ paragraph }}</span>
+            <span v-if="paragraph.match(/(\$html\[)+(.)+(\])/)">
+              {{ paragraph.substring(0, paragraph.match(/(\$html\[)+(.)+(\])/).index) }}
+              <a
+                :href="JSON.parse(paragraph.match(/({)+(.)+(})/)[0]).link"
+                target="_brank">{{ JSON.parse(paragraph.match(/({)+(.)+(})/)[0]).text }}</a>
+              {{ paragraph.substring(paragraph.match(/(\$html\[)+(.)+(\])/).index + paragraph.match(/(\$html\[)+(.)+(\])/)[0].length) }}
+            </span>
+            <span v-else>{{ paragraph }}</span>
           </p>
           <div class="fullscreen-spliter" v-if="agenda.session[nowFocusSessionIndex].link">
             <p><span>簡報連結</span></p>
@@ -65,15 +72,11 @@
           <p v-for="(paragraph, i) in agenda.session[nowFocusSessionIndex].bio" :key="`bio-${i}`">
             <span v-if="paragraph.match(/(\$html\[)+(.)+(\])/)">
               {{ paragraph.substring(0, paragraph.match(/(\$html\[)+(.)+(\])/).index) }}
+              <a
+                :href="JSON.parse(paragraph.match(/({)+(.)+(})/)[0]).link"
+                target="_brank">{{ JSON.parse(paragraph.match(/({)+(.)+(})/)[0]).text }}</a>
+              {{ paragraph.substring(paragraph.match(/(\$html\[)+(.)+(\])/).index + paragraph.match(/(\$html\[)+(.)+(\])/)[0].length) }}
             </span>
-            <a
-              v-if="paragraph.match(/(\$html\[)+(.)+(\])/)"
-              :href="JSON.parse(paragraph.match(/({)+(.)+(})/)[0]).link"
-              target="_brank">
-              <span>
-                {{ JSON.parse(paragraph.match(/({)+(.)+(})/)[0]).text }}
-              </span>
-            </a>
             <span v-else>{{ paragraph }}</span>
           </p>
         </div>
@@ -100,6 +103,7 @@ export default {
           '11:50',
           '12:00',
           '12:20',
+          '12:30',
           '12:50',
           '13:00',
           '13:20',
@@ -306,6 +310,16 @@ export default {
             bio: ['不造神、不捧神，鉚釘被拿來造飛機也不該以為自己從此會飛。', '「真正的工程師不說廢話。」讓我們用技術說話。', '請參閱我的 $html[$a{"link":"https://www.linkedin.com/in/pingnote","text":"LinkedIn Profile"}]'],
             time: '20',
             id: '3C'
+          },
+          {
+            name: 'HackmeCTF 平台背後的心酸血淚歷',
+            summary: ['這場議程我將會介紹我建立 $html[$a{"link":"https://hackme.inndy.tw","text":"HackmeCTF"}] 到現在經歷過的心酸血淚史（？）以及背後用到的技術分享。', '$html[$a{"link":"https://hackme.inndy.tw","text":"HackmeCTF"}] 是一個給資安新手的練習平台，上面有一些我曾經解過，覺得好玩的題目，以及我自己出的題目，多數題目有給提示以及相關的工具，對於新手入門有相當幫助，老手也能享受有趣的題目！'],
+            link: '',
+            image: 'speaker18.png',
+            speaker: 'Inndy',
+            bio: ['我是 Inndy，也可以叫我木棍。人生目標是成為一個興趣使然的 security master。', '過去曾經講過 HITCON, SITCON, 兩屆的 TDOH Conf，今年也不缺席！'],
+            time: '20',
+            id: '4C'
           },
           {
             name: '淺談 ATT&CK',

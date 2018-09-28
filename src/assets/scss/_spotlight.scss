@@ -161,7 +161,7 @@
     width: 768px;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 1rem repeat(3, 2.5rem) 7rem 2.5rem 7rem 2.5rem 7rem 2.5rem 2.5rem 7rem 2.5rem 7rem 2.5rem 7rem 2.5rem 7rem 2.5rem repeat(8, 2.5rem);
+    grid-template-rows: 1rem repeat(3, 2.5rem) 7rem 2.5rem 7rem 2.5rem 7rem 2.5rem 7rem 2.5rem 7rem 2.5rem 7rem 2.5rem 7rem 2.5rem 7rem 2.5rem repeat(8, 2.5rem);
     grid-template-columns: 4rem repeat(4, 1fr);
     grid-template-areas:
       "blank   room-A     room-B     room-C     room-D"
@@ -176,28 +176,28 @@
       /* --------------------------------------------- */
       "time-7  session-2A session-2B session-3C session-1D"
       "time-8  session-2A session-2B break-4    session-1D"
-      // "time-9  session-2A session-2B session-4C session-1D"
-      "time-9 break-5    break-5    break-5    session-1D"
+      "time-9  session-2A session-2B session-4C session-1D"
+      "time-10 break-5    break-5    break-5    session-1D"
       /* --------------------------------------------- */
-      "time-10 session-3A session-3B session-5C session-1D"
-      "time-11 session-3A session-3B break-6    session-1D"
-      "time-12 session-3A session-3B session-6C session-1D"
-      "time-13 break-7    break-7    break-7    break-7"
+      "time-11 session-3A session-3B session-5C session-1D"
+      "time-12 session-3A session-3B break-6    session-1D"
+      "time-13 session-3A session-3B session-6C session-1D"
+      "time-14 break-7    break-7    break-7    break-7"
       /* --------------------------------------------- */
-      "time-14 session-4A session-4B session-7C session-2D"
-      "time-15 session-4A session-4B break-8    session-2D"
-      "time-16 session-4A session-4B session-8C session-2D"
-      "time-17 break-9    break-9    session-8C session-2D"
+      "time-15 session-4A session-4B session-7C session-2D"
+      "time-16 session-4A session-4B break-8    session-2D"
+      "time-17 session-4A session-4B session-8C session-2D"
+      "time-18 break-9    break-9    session-8C session-2D"
       /* --------------------------------------------- */
-      "time-18 session-5A session-5B session-8C session-2D"
       "time-19 session-5A session-5B session-8C session-2D"
       "time-20 session-5A session-5B session-8C session-2D"
+      "time-21 session-5A session-5B session-8C session-2D"
       /* --------------------------------------------- */
-      "time-21 break-a    break-a    session-8C session-2D"
-      "time-22 lighting   lighting   session-8C session-2D"
-      "time-23 closing    closing    session-8C session-2D"
-      /* --------------------------------------------- */
-      "time-24 ending     ending     ending     ending";
+      "time-22 break-a    break-a    session-8C session-2D"
+      "time-23 lighting   lighting   session-8C session-2D"
+      "time-24 closing    closing    session-8C session-2D"
+      /* -------------------------------------------- */
+      "time-25 ending     ending     ending     ending";
     text-align: center;
     box-sizing: border-box;
     overflow: hidden;
@@ -226,7 +226,7 @@
         "time-5  session-2B"
         "time-5  session-3C"
         /* ------------ */
-        "time-6  break-5"
+        "time-6  session-4C"
         /* ------------ */
         "time-7  session-3A"
         "time-7  session-3B"
@@ -341,7 +341,7 @@
     }
     .break {
       @media screen and (max-width: 900px) {
-        &-1, &-5, &-7, &-a {
+        &-1, &-7, &-a {
           display: inherit;
         }
       } 
