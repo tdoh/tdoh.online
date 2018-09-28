@@ -78,7 +78,7 @@ export default {
               link: 'http://leukocyte-lab.com/'
             },
             {
-              title: 'klickklack',
+              title: 'Klick Klack 可立可股份有限公司',
               image: 'LUmnLaOQ.png',
               link: 'https://www.kkco.com.tw'
             },
