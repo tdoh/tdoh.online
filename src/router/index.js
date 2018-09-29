@@ -71,7 +71,7 @@ const router = new Router({
       component: views.FloorMap
     },
     {
-      path: '/2018/*',
+      path: '*',
       name: 'Error',
       component: views.Error
     }
