@@ -7,3 +7,6 @@
 [submodule "2018"]
 	path = 2018
 	url = https://github.com/tdoh/TDOHConf2018
+[submodule "2019"]
+	path = 2019
+	url = https://github.com/tdoh/TDOHConf2019.git
